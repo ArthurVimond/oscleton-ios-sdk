@@ -1,6 +1,6 @@
 # Oscleton SDK for iOS
 
-Ableton Live companion SDK for Android
+Ableton Live companion SDK for iOS
 
 ## License
 
