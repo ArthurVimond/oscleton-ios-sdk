@@ -10,7 +10,7 @@ import Foundation
 
 public class OscletonSDK {
     
-    public static let sharedInstance = OscletonSDK()
+    public static let instance = OscletonSDK()
     
     private init() {
         

@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        OscletonSDK.sharedInstance.initialize()
+        OscletonSDK.instance.initialize()
         
     }
 
