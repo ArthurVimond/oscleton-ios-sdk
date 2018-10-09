@@ -10,6 +10,7 @@
 		F308E264216CD76700A452D5 /* OscletonSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F308E25A216CD76600A452D5 /* OscletonSDK.framework */; };
 		F308E269216CD76700A452D5 /* OscletonSDKTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F308E268216CD76700A452D5 /* OscletonSDKTests.swift */; };
 		F308E26B216CD76700A452D5 /* OscletonSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = F308E25D216CD76600A452D5 /* OscletonSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F3586487216CDEA400DEB70E /* OscletonSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3586486216CDEA400DEB70E /* OscletonSDK.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		F308E263216CD76700A452D5 /* OscletonSDKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OscletonSDKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F308E268216CD76700A452D5 /* OscletonSDKTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OscletonSDKTests.swift; sourceTree = "<group>"; };
 		F308E26A216CD76700A452D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F3586486216CDEA400DEB70E /* OscletonSDK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OscletonSDK.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 		F308E250216CD76600A452D5 = {
 			isa = PBXGroup;
 			children = (
+				F3586485216CDE7D00DEB70E /* Core */,
 				F308E25C216CD76600A452D5 /* OscletonSDK */,
 				F308E267216CD76700A452D5 /* OscletonSDKTests */,
 				F308E25B216CD76600A452D5 /* Products */,
@@ -84,6 +87,14 @@
 				F308E26A216CD76700A452D5 /* Info.plist */,
 			);
 			path = OscletonSDKTests;
+			sourceTree = "<group>";
+		};
+		F3586485216CDE7D00DEB70E /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				F3586486216CDEA400DEB70E /* OscletonSDK.swift */,
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +159,7 @@
 				TargetAttributes = {
 					F308E259216CD76600A452D5 = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1000;
 					};
 					F308E262216CD76700A452D5 = {
 						CreatedOnToolsVersion = 10.0;
@@ -194,6 +206,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3586487216CDEA400DEB70E /* OscletonSDK.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +354,7 @@
 		F308E26F216CD76700A452D5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -359,6 +373,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.oscleton.sdk.OscletonSDK;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -367,6 +382,7 @@
 		F308E270216CD76700A452D5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -393,6 +409,7 @@
 		F308E272216CD76700A452D5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 54PJPCWSAT;
 				INFOPLIST_FILE = OscletonSDKTests/Info.plist;
@@ -411,6 +428,7 @@
 		F308E273216CD76700A452D5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 54PJPCWSAT;
 				INFOPLIST_FILE = OscletonSDKTests/Info.plist;

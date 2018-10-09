@@ -14,6 +14,7 @@
 		F308E28C216CD8B000A452D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F308E28A216CD8B000A452D5 /* LaunchScreen.storyboard */; };
 		F308E297216CD8B000A452D5 /* OscletonSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F308E296216CD8B000A452D5 /* OscletonSampleTests.swift */; };
 		F308E2A2216CD8B000A452D5 /* OscletonSampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F308E2A1216CD8B000A452D5 /* OscletonSampleUITests.swift */; };
+		F358648C216CE21800DEB70E /* OscletonSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F3586489216CDF6500DEB70E /* OscletonSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +34,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		F358648D216CE21800DEB70E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F358648C216CE21800DEB70E /* OscletonSDK.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		F308E27E216CD8AE00A452D5 /* OscletonSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OscletonSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F308E281216CD8AE00A452D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +62,7 @@
 		F308E29D216CD8B000A452D5 /* OscletonSampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OscletonSampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F308E2A1216CD8B000A452D5 /* OscletonSampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OscletonSampleUITests.swift; sourceTree = "<group>"; };
 		F308E2A3216CD8B000A452D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F3586489216CDF6500DEB70E /* OscletonSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = OscletonSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +97,7 @@
 				F308E295216CD8B000A452D5 /* OscletonSampleTests */,
 				F308E2A0216CD8B000A452D5 /* OscletonSampleUITests */,
 				F308E27F216CD8AE00A452D5 /* Products */,
+				F3586488216CDF6500DEB70E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +142,14 @@
 			path = OscletonSampleUITests;
 			sourceTree = "<group>";
 		};
+		F3586488216CDF6500DEB70E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F3586489216CDF6500DEB70E /* OscletonSDK.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,6 +160,7 @@
 				F308E27A216CD8AE00A452D5 /* Sources */,
 				F308E27B216CD8AE00A452D5 /* Frameworks */,
 				F308E27C216CD8AE00A452D5 /* Resources */,
+				F358648D216CE21800DEB70E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
