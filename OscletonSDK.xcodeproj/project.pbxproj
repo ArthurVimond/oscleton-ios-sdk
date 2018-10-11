@@ -7,10 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F308E264216CD76700A452D5 /* OscletonSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F308E25A216CD76600A452D5 /* OscletonSDK.framework */; };
+		6CBC5CBC1FF7405A6A60C5C2 /* Pods_OscletonSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 786EBD15E89E82B3F44FDD24 /* Pods_OscletonSDK.framework */; };
 		F308E269216CD76700A452D5 /* OscletonSDKTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F308E268216CD76700A452D5 /* OscletonSDKTests.swift */; };
 		F308E26B216CD76700A452D5 /* OscletonSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = F308E25D216CD76600A452D5 /* OscletonSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F3586487216CDEA400DEB70E /* OscletonSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3586486216CDEA400DEB70E /* OscletonSDK.swift */; };
+		F3BB483A216F80AD00E8F426 /* OSReceiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BB4835216F80AD00E8F426 /* OSReceiver.swift */; };
+		F3BB483B216F80AD00E8F426 /* DependencyProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BB4837216F80AD00E8F426 /* DependencyProvider.swift */; };
+		F3BB483C216F80AD00E8F426 /* OSReactiveReceiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BB4838216F80AD00E8F426 /* OSReactiveReceiver.swift */; };
+		F3BB483D216F80AD00E8F426 /* OscletonSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BB4839216F80AD00E8F426 /* OscletonSDK.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,13 +27,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		16FBC140AE8DF7F15A60D419 /* Pods-OscletonSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OscletonSDK.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OscletonSDK/Pods-OscletonSDK.debug.xcconfig"; sourceTree = "<group>"; };
+		71CD993711A1AB12CD232824 /* Pods-OscletonSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OscletonSDK.release.xcconfig"; path = "Pods/Target Support Files/Pods-OscletonSDK/Pods-OscletonSDK.release.xcconfig"; sourceTree = "<group>"; };
+		786EBD15E89E82B3F44FDD24 /* Pods_OscletonSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OscletonSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F308E25A216CD76600A452D5 /* OscletonSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OscletonSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F308E25D216CD76600A452D5 /* OscletonSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OscletonSDK.h; sourceTree = "<group>"; };
 		F308E25E216CD76600A452D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F308E263216CD76700A452D5 /* OscletonSDKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OscletonSDKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F308E268216CD76700A452D5 /* OscletonSDKTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OscletonSDKTests.swift; sourceTree = "<group>"; };
 		F308E26A216CD76700A452D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F3586486216CDEA400DEB70E /* OscletonSDK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OscletonSDK.swift; sourceTree = "<group>"; };
+		F3BB4835216F80AD00E8F426 /* OSReceiver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSReceiver.swift; sourceTree = "<group>"; };
+		F3BB4837216F80AD00E8F426 /* DependencyProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DependencyProvider.swift; sourceTree = "<group>"; };
+		F3BB4838216F80AD00E8F426 /* OSReactiveReceiver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSReactiveReceiver.swift; sourceTree = "<group>"; };
+		F3BB4839216F80AD00E8F426 /* OscletonSDK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OscletonSDK.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6CBC5CBC1FF7405A6A60C5C2 /* Pods_OscletonSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,20 +55,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F308E264216CD76700A452D5 /* OscletonSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		30901D4233ED12E2F257550D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				16FBC140AE8DF7F15A60D419 /* Pods-OscletonSDK.debug.xcconfig */,
+				71CD993711A1AB12CD232824 /* Pods-OscletonSDK.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		F308E250216CD76600A452D5 = {
 			isa = PBXGroup;
 			children = (
-				F3586485216CDE7D00DEB70E /* Core */,
 				F308E25C216CD76600A452D5 /* OscletonSDK */,
 				F308E267216CD76700A452D5 /* OscletonSDKTests */,
 				F308E25B216CD76600A452D5 /* Products */,
+				F30A6AC5216E084A00A62CE9 /* Frameworks */,
+				30901D4233ED12E2F257550D /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,6 +93,7 @@
 		F308E25C216CD76600A452D5 /* OscletonSDK */ = {
 			isa = PBXGroup;
 			children = (
+				F3BB4834216F80AD00E8F426 /* Core */,
 				F308E25D216CD76600A452D5 /* OscletonSDK.h */,
 				F308E25E216CD76600A452D5 /* Info.plist */,
 			);
@@ -89,12 +109,31 @@
 			path = OscletonSDKTests;
 			sourceTree = "<group>";
 		};
-		F3586485216CDE7D00DEB70E /* Core */ = {
+		F30A6AC5216E084A00A62CE9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F3586486216CDEA400DEB70E /* OscletonSDK.swift */,
+				786EBD15E89E82B3F44FDD24 /* Pods_OscletonSDK.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F3BB4834216F80AD00E8F426 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				F3BB4835216F80AD00E8F426 /* OSReceiver.swift */,
+				F3BB4836216F80AD00E8F426 /* DI */,
+				F3BB4838216F80AD00E8F426 /* OSReactiveReceiver.swift */,
+				F3BB4839216F80AD00E8F426 /* OscletonSDK.swift */,
 			);
 			path = Core;
+			sourceTree = "<group>";
+		};
+		F3BB4836216F80AD00E8F426 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				F3BB4837216F80AD00E8F426 /* DependencyProvider.swift */,
+			);
+			path = DI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -115,6 +154,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F308E26E216CD76700A452D5 /* Build configuration list for PBXNativeTarget "OscletonSDK" */;
 			buildPhases = (
+				6613F7E26109BA12387D43CE /* [CP] Check Pods Manifest.lock */,
 				F308E255216CD76600A452D5 /* Headers */,
 				F308E256216CD76600A452D5 /* Sources */,
 				F308E257216CD76600A452D5 /* Frameworks */,
@@ -201,12 +241,40 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6613F7E26109BA12387D43CE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OscletonSDK-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F308E256216CD76600A452D5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F3586487216CDEA400DEB70E /* OscletonSDK.swift in Sources */,
+				F3BB483C216F80AD00E8F426 /* OSReactiveReceiver.swift in Sources */,
+				F3BB483D216F80AD00E8F426 /* OscletonSDK.swift in Sources */,
+				F3BB483A216F80AD00E8F426 /* OSReceiver.swift in Sources */,
+				F3BB483B216F80AD00E8F426 /* DependencyProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,7 +421,9 @@
 		};
 		F308E26F216CD76700A452D5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 16FBC140AE8DF7F15A60D419 /* Pods-OscletonSDK.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -381,7 +451,9 @@
 		};
 		F308E270216CD76700A452D5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 71CD993711A1AB12CD232824 /* Pods-OscletonSDK.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
