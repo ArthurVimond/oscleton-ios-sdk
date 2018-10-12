@@ -10,7 +10,7 @@ import Foundation
 
 public class OSLiveSetDataManager {
     
-    public private(set) var messageManager: OSMessageManager
+    private let messageManager: OSMessageManager
     
     init(messageManager: OSMessageManager) {
         self.messageManager = messageManager
