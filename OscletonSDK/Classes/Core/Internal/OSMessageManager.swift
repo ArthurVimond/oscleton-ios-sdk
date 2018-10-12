@@ -9,10 +9,30 @@ import Foundation
 
 public class OSMessageManager {
     
-    public private(set) var oscManager: OSOSCManager
+    private let oscManager: OSOSCManager
     
     init(oscManager: OSOSCManager) {
         self.oscManager = oscManager
+    }
+    
+    public func sendMessage(address: String, args: [Any]? = nil) {
+        oscManager.sendMessage(address: address, args: args)
+    }
+    
+    func connect() {
+        oscManager.connect()
+    }
+    
+    func disconnect() {
+        oscManager.disconnect()
+    }
+    
+    func startListening() {
+        oscManager.startListening()
+    }
+    
+    func stopListening() {
+        oscManager.stopListening()
     }
     
 }
