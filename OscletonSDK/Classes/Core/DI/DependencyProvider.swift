@@ -19,29 +19,30 @@ class DependencyProvider {
             let liveSetDataManager = r.resolve(OSLiveSetDataManager.self)!
             let messageManager = r.resolve(OSMessageManager.self)!
             return OSConfiguration(liveSetDataManager: liveSetDataManager, messageManager: messageManager)
-        }
+        }.inObjectScope(.container)
         
         container.register(OSController.self) { r in
             OSController(messageManager: r.resolve(OSMessageManager.self)!)
-        }
+        }.inObjectScope(.container)
         
         container.register(OSReceiver.self) { r in
             OSReceiver(rx: r.resolve(OSReactiveReceiver.self)!)
-        }
+        }.inObjectScope(.container)
         
         container.register(OSReactiveReceiver.self) { r in
             OSReactiveReceiver(liveSetDataManager: r.resolve(OSLiveSetDataManager.self)!)
-        }
+        }.inObjectScope(.container)
         
         container.register(OSLiveSetDataManager.self) { r in
             OSLiveSetDataManager(messageManager: r.resolve(OSMessageManager.self)!)
-        }
+        }.inObjectScope(.container)
         
         container.register(OSMessageManager.self) { r in
             OSMessageManager(oscManager: r.resolve(OSOSCManager.self)!)
-        }
+        }.inObjectScope(.container)
         
         container.register(OSOSCManager.self) { _ in OSOSCManager() }
+            .inObjectScope(.container)
         
     }
     
