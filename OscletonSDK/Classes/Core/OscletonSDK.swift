@@ -14,13 +14,15 @@ public class OscletonSDK {
     
     private let dependencyProvider = DependencyProvider()
     
+    public private(set) var configuration: OSConfiguration
     public private(set) var controller: OSController
     public private(set) var receiver: OSReceiver
     
     private init() {
         print("OscletonSDK::init")
-        receiver = dependencyProvider.provideReceiver()
+        configuration = dependencyProvider.provideConfiguration()
         controller = dependencyProvider.provideController()
+        receiver = dependencyProvider.provideReceiver()
     }
     
     public func initialize() {
