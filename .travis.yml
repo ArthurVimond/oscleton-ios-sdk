@@ -2,6 +2,8 @@ os: osx
 osx_image: xcode10
 language: objective-c
 cache: cocoapods
+xcode_project: Example/OscletonSDK.xcworkspace
+xcode_scheme: OscletonSDK-Example
 xcode_sdk: iphonesimulator12.0
 podfile: Example/Podfile
 before_install:
@@ -9,5 +11,5 @@ before_install:
   - pod repo update
   - pod install --project-directory=Example
 script:
-  - set -o pipefail && xcodebuild test -enableCodeCoverage YES -workspace Example/OscletonSDK.xcworkspace -scheme OscletonSDK-Example -sdk iphonesimulator12.0 ONLY_ACTIVE_ARCH=NO | xcpretty
+  # - set -o pipefail && xcodebuild test -enableCodeCoverage YES -workspace Example/OscletonSDK.xcworkspace -scheme OscletonSDK-Example -sdk iphonesimulator12.0 ONLY_ACTIVE_ARCH=NO | xcpretty
   - pod lib lint
