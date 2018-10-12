@@ -1,6 +1,27 @@
 # Oscleton SDK for iOS
 
+[![CI Status](https://img.shields.io/travis/ArthurVimond/oscleton-ios-sdk.svg?style=flat)](https://travis-ci.org/ArthurVimond/oscleton-ios-sdk)
+[![Version](https://img.shields.io/cocoapods/v/OscletonSDK.svg?style=flat)](https://cocoapods.org/pods/OscletonSDK)
+[![License](https://img.shields.io/cocoapods/l/OscletonSDK.svg?style=flat)](https://cocoapods.org/pods/OscletonSDK)
+[![Platform](https://img.shields.io/cocoapods/p/OscletonSDK.svg?style=flat)](https://cocoapods.org/pods/OscletonSDK)
+
 Ableton Live companion SDK for iOS
+
+## Example
+
+To run the example project, clone the repo, and run `pod install` from the Example directory first.
+
+## Pod Setup
+
+(not available yet)
+
+OscletonSDK is available through [CocoaPods](https://cocoapods.org). To install
+it, simply add the following line to your Podfile:
+
+```ruby
+pod 'OscletonSDK'
+```
+
 
 ## License
 
@@ -11,7 +32,7 @@ Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
 You may obtain a copy of the License at
 
-   http://www.apache.org/licenses/LICENSE-2.0
+http://www.apache.org/licenses/LICENSE-2.0
 
 Unless required by applicable law or agreed to in writing, software
 distributed under the License is distributed on an "AS IS" BASIS,
