@@ -9,9 +9,10 @@ import Foundation
 
 public class OSMessageManager {
     
-    init() {
-        print("OSMessageManager::init")
-        
+    public private(set) var oscManager: OSOSCManager
+    
+    init(oscManager: OSOSCManager) {
+        self.oscManager = oscManager
     }
     
 }

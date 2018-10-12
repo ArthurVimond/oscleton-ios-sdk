@@ -27,7 +27,11 @@ class DependencyProvider {
             OSLiveSetDataManager(messageManager: r.resolve(OSMessageManager.self)!)
         }
         
-        container.register(OSMessageManager.self) { _ in OSMessageManager() }
+        container.register(OSMessageManager.self) { r in
+            OSMessageManager(oscManager: r.resolve(OSOSCManager.self)!)
+        }
+        
+        container.register(OSOSCManager.self) { _ in OSOSCManager() }
         
     }
     
@@ -45,6 +49,10 @@ class DependencyProvider {
     
     func provideMessageManager() -> OSMessageManager {
         return container.resolve(OSMessageManager.self)!
+    }
+    
+    func provideOSCManager() -> OSOSCManager {
+        return container.resolve(OSOSCManager.self)!
     }
     
 }
