@@ -23,7 +23,11 @@ class DependencyProvider {
             OSReactiveReceiver(liveSetDataManager: r.resolve(OSLiveSetDataManager.self)!)
         }
         
-        container.register(OSLiveSetDataManager.self) { _ in OSLiveSetDataManager() }
+        container.register(OSLiveSetDataManager.self) { r in
+            OSLiveSetDataManager(messageManager: r.resolve(OSMessageManager.self)!)
+        }
+        
+        container.register(OSMessageManager.self) { _ in OSMessageManager() }
         
     }
     
@@ -36,7 +40,11 @@ class DependencyProvider {
     }
     
     func provideLiveSetDataManager() -> OSLiveSetDataManager {
-        return OSLiveSetDataManager()
+        return container.resolve(OSLiveSetDataManager.self)!
+    }
+    
+    func provideMessageManager() -> OSMessageManager {
+        return container.resolve(OSMessageManager.self)!
     }
     
 }

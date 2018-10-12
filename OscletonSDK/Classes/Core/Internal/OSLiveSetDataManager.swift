@@ -10,9 +10,10 @@ import Foundation
 
 public class OSLiveSetDataManager {
     
-    init() {
-        print("OSLiveSetDataManager::init")
-        
+    public private(set) var messageManager: OSMessageManager
+    
+    init(messageManager: OSMessageManager) {
+        self.messageManager = messageManager
     }
     
 }
