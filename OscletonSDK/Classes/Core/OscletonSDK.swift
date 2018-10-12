@@ -18,15 +18,46 @@ public class OscletonSDK {
     public private(set) var controller: OSController
     public private(set) var receiver: OSReceiver
     
+    private let messageManager: OSMessageManager
+    
     private init() {
         print("OscletonSDK::init")
         configuration = dependencyProvider.provideConfiguration()
         controller = dependencyProvider.provideController()
         receiver = dependencyProvider.provideReceiver()
+        messageManager = dependencyProvider.provideMessageManager()
     }
     
     public func initialize() {
         
+    }
+    
+    public func connect() {
+        messageManager.connect()
+    }
+    
+    public func disconnect() {
+        messageManager.disconnect()
+    }
+    
+    public func startListening() {
+        messageManager.startListening()
+    }
+    
+    public func stopListening() {
+        messageManager.stopListening()
+    }
+    
+    // Lifecycle
+    
+    public func applicationDidBecomeActive() {
+        connect()
+        startListening()
+    }
+    
+    public func applicationWillResignActive() {
+        stopListening()
+        disconnect()
     }
     
 }
