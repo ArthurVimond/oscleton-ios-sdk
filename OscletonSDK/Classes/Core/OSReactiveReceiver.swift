@@ -10,6 +10,12 @@ import Foundation
 
 public class OSReactiveReceiver {
     
+    public private(set) var liveSetDataManager: OSLiveSetDataManager
+    
+    init(liveSetDataManager: OSLiveSetDataManager) {
+        self.liveSetDataManager = liveSetDataManager
+    }
+    
     public func test() {
         print("test()")
     }
