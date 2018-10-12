@@ -10,10 +10,18 @@ import Foundation
 
 public class OSController {
     
-    public private(set) var messageManager: OSMessageManager
+    private let messageManager: OSMessageManager
     
     init(messageManager: OSMessageManager) {
         self.messageManager = messageManager
+    }
+    
+    public func play() {
+        messageManager.sendMessage(address: OSLiveAPI.play)
+    }
+    
+    public func stop() {
+        messageManager.sendMessage(address: OSLiveAPI.stop)
     }
     
 }
