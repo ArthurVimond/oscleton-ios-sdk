@@ -296,6 +296,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-OscletonSDK_Example/Pods-OscletonSDK_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/OscletonSDK/OscletonSDK.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftOSC/SwiftOSC.framework",
 				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -303,6 +304,7 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OscletonSDK.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftOSC.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
