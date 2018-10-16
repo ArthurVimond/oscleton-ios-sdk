@@ -1,5 +1,5 @@
 //
-//  OSMessageManager.swift
+//  MessageManager.swift
 //  OscletonSDK
 //
 //  Created by Arthur Vimond on 12/10/2018.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-public class OSMessageManager {
+public class MessageManager {
     
     private let oscManager: OSCManager
     

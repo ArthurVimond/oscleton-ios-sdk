@@ -18,7 +18,7 @@ public class OscletonSDK {
     public private(set) var controller: OSController
     public private(set) var receiver: OSReceiver
     
-    private let messageManager: OSMessageManager
+    private let messageManager: MessageManager
     
     private init() {
         print("OscletonSDK::init")
