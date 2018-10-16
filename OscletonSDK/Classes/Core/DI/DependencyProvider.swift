@@ -38,10 +38,10 @@ class DependencyProvider {
         }.inObjectScope(.container)
         
         container.register(OSMessageManager.self) { r in
-            OSMessageManager(oscManager: r.resolve(OSOSCManager.self)!)
+            OSMessageManager(oscManager: r.resolve(OSCManager.self)!)
         }.inObjectScope(.container)
         
-        container.register(OSOSCManager.self) { _ in OSOSCManager() }
+        container.register(OSCManager.self) { _ in OSCManager() }
             .inObjectScope(.container)
         
     }
@@ -70,8 +70,8 @@ class DependencyProvider {
         return container.resolve(OSMessageManager.self)!
     }
     
-    func provideOSCManager() -> OSOSCManager {
-        return container.resolve(OSOSCManager.self)!
+    func provideOSCManager() -> OSCManager {
+        return container.resolve(OSCManager.self)!
     }
     
 }

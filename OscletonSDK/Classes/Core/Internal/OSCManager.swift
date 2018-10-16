@@ -1,5 +1,5 @@
 //
-//  OSOSCManager.swift
+//  OSCManager.swift
 //  OscletonSDK
 //
 //  Created by Arthur Vimond on 12/10/2018.
@@ -8,7 +8,7 @@
 import Foundation
 import SwiftOSC
 
-class OSOSCManager : OSCServerDelegate {
+class OSCManager : OSCServerDelegate {
     
     private let receiver = OSCServer(address: "", port: 9001)
     private let sender = OSCClient(address: "localhost", port: 9000)
@@ -16,7 +16,7 @@ class OSOSCManager : OSCServerDelegate {
     private let address = OSCAddressPattern("/")
     
     init() {
-        print("OSOSCManager::init")
+        print("OSCManager::init")
         
         // Set sender ip (temp)
         sender.address = "192.168.4.186"

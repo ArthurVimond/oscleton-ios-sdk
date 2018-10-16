@@ -9,9 +9,9 @@ import Foundation
 
 public class OSMessageManager {
     
-    private let oscManager: OSOSCManager
+    private let oscManager: OSCManager
     
-    init(oscManager: OSOSCManager) {
+    init(oscManager: OSCManager) {
         self.oscManager = oscManager
     }
     
