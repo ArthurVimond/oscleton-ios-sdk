@@ -1,5 +1,5 @@
 //
-//  OSLiveAPI.swift
+//  LiveAPI.swift
 //  OscletonSDK
 //
 //  Created by Arthur Vimond on 12/10/2018.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct OSLiveAPI {
+struct LiveAPI {
     
     // Prefix
     private static let live = "/live/"
