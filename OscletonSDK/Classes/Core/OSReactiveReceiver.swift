@@ -10,9 +10,9 @@ import Foundation
 
 public class OSReactiveReceiver {
     
-    private let liveSetDataManager: OSLiveSetDataManager
+    private let liveSetDataManager: LiveSetDataManager
     
-    init(liveSetDataManager: OSLiveSetDataManager) {
+    init(liveSetDataManager: LiveSetDataManager) {
         self.liveSetDataManager = liveSetDataManager
     }
     

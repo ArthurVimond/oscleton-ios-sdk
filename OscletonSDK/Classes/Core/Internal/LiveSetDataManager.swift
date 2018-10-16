@@ -1,5 +1,5 @@
 //
-//  OSLiveSetDataManager.swift
+//  LiveSetDataManager.swift
 //  OscletonSDK
 //
 //  Created by Arthur Vimond on 12/10/2018.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class OSLiveSetDataManager {
+public class LiveSetDataManager {
     
     private let messageManager: MessageManager
     

@@ -10,10 +10,10 @@ import Foundation
 
 public class OSConfiguration {
     
-    private let liveSetDataManager: OSLiveSetDataManager
+    private let liveSetDataManager: LiveSetDataManager
     private let messageManager: MessageManager
     
-    init(liveSetDataManager: OSLiveSetDataManager, messageManager: MessageManager) {
+    init(liveSetDataManager: LiveSetDataManager, messageManager: MessageManager) {
         self.liveSetDataManager = liveSetDataManager
         self.messageManager = messageManager
     }
