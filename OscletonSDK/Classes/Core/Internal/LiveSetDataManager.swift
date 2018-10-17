@@ -7,8 +7,15 @@
 //
 
 import Foundation
+import RxSwift
 
 public class LiveSetDataManager {
+    
+    var tempo: Observable<Float> {
+        get { return messageManager.oscMessage
+                .filter { $0.address.string == LiveAPI.tempo }
+                .map { $0.arguments.first!!.float() } }
+    }
     
     private let messageManager: MessageManager
     
