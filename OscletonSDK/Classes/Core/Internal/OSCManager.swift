@@ -7,8 +7,11 @@
 
 import Foundation
 import SwiftOSC
+import RxSwift
 
 class OSCManager : OSCServerDelegate {
+    
+    public let oscMessage: PublishSubject<OSCMessage> = PublishSubject()
     
     private let sender = OSCClient(address: "", port: 9000)
     private let receiver = OSCServer(address: "", port: 9001)
@@ -80,6 +83,7 @@ class OSCManager : OSCServerDelegate {
     
     func didReceive(_ message: OSCMessage) {
         print("didReceive - message.address: \(message.address.string)")
+        oscMessage.onNext(message)
     }
     
 }

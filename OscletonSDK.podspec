@@ -38,5 +38,7 @@ Pod::Spec.new do |s|
   # s.frameworks = 'UIKit', 'MapKit'
   s.dependency "Swinject", "~> 2.5.0"
   s.dependency "SwiftOSC", "~> 1.2"
+  s.dependency "RxSwift", "~> 4.0"
+  s.dependency "RxCocoa", "~> 4.0"
 
 end
