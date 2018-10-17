@@ -6,8 +6,14 @@
 //
 
 import Foundation
+import SwiftOSC
+import RxSwift
 
 public class MessageManager {
+    
+    var oscMessage: Observable<OSCMessage> {
+        get { return oscManager.oscMessage }
+    }
     
     private let oscManager: OSCManager
     
