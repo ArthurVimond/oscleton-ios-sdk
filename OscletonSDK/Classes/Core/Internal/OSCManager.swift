@@ -10,20 +10,29 @@ import SwiftOSC
 
 class OSCManager : OSCServerDelegate {
     
+    private let sender = OSCClient(address: "", port: 9000)
     private let receiver = OSCServer(address: "", port: 9001)
-    private let sender = OSCClient(address: "localhost", port: 9000)
     
     private let address = OSCAddressPattern("/")
     
     init() {
         print("OSCManager::init")
         
-        // Set sender ip (temp)
-        sender.address = "192.168.4.186"
-        
     }
     
-    func connect() {
+    func initSender(ip: String, port: Int = 9000) -> OSResult {
+        print("initSender - ip: \(ip) - port: \(port)")
+        
+        // TODO: Add IP validation
+        
+        sender.address = ip
+        sender.port = port
+        
+        return OSResult.success
+    }
+    
+    func connect(receiverPort: Int = 9001) {
+        receiver.port = receiverPort
         receiver.start()
     }
     
@@ -39,7 +48,7 @@ class OSCManager : OSCServerDelegate {
         receiver.stop()
     }
     
-    func sendMessage(address: String, args: [Any]? = nil) {
+    func sendMessage(_ address: String, _ args: [Any]? = nil) {
         
         let oscAddress = OSCAddressPattern(address)
         let oscMessage = OSCMessage(oscAddress)
@@ -70,9 +79,7 @@ class OSCManager : OSCServerDelegate {
     // OSCServerDelegate
     
     func didReceive(_ message: OSCMessage) {
-        print("didReceive - message.address: \(message.address)")
+        print("didReceive - message.address: \(message.address.string)")
     }
-    
-    
     
 }
