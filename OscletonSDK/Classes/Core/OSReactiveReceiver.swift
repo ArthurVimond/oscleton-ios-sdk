@@ -7,8 +7,13 @@
 //
 
 import Foundation
+import RxSwift
 
 public class OSReactiveReceiver {
+    
+    public var tempo: Observable<Float> {
+        get { return liveSetDataManager.tempo }
+    }
     
     private let liveSetDataManager: LiveSetDataManager
     
