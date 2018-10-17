@@ -18,4 +18,8 @@ public class OSConfiguration {
         self.messageManager = messageManager
     }
     
+    public func setComputerIP(ip: String) -> OSResult {
+        return messageManager.initSender(ip: ip)
+    }
+    
 }
