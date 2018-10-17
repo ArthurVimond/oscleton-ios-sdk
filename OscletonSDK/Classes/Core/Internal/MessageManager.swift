@@ -15,8 +15,47 @@ public class MessageManager {
         self.oscManager = oscManager
     }
     
-    public func sendMessage(address: String, args: [Any]? = nil) {
-        oscManager.sendMessage(address: address, args: args)
+    func initSender(ip: String, port: Int = 9000) -> OSResult {
+        let result = oscManager.initSender(ip: ip, port: port)
+        
+        if result != .success {
+            return result
+        }
+        
+        // Set peer
+        setPeer()
+        
+        // Request current state
+        requestCurrentState()
+        
+        return result
+    }
+    
+    private func setPeer() {
+        
+        guard let ipAddress = NetworkUtils.deviceIPAddress()
+            else { return }
+        
+        print("setPeer - ipAddress: \(ipAddress)")
+        let args: [Any] = [ipAddress, 9001]
+        sendMessage(LiveAPI.setPeer, args)
+    }
+    
+    private func requestCurrentState() {
+        print("requestCurrentState")
+    
+//        sendMessage(LiveAPI.liveVersion)
+//        sendMessage(LiveAPI.scriptVersion)
+//
+        sendMessage(LiveAPI.tempo)
+//
+//        sendMessage(LiveAPI.masterVolume)
+//        sendMessage(LiveAPI.masterPanning)
+    
+    }
+    
+    public func sendMessage(_ address: String, _ args: [Any]? = nil) {
+        oscManager.sendMessage(address, args)
     }
     
     func connect() {
