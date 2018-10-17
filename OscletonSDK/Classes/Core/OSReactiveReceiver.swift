@@ -21,8 +21,4 @@ public class OSReactiveReceiver {
         self.liveSetDataManager = liveSetDataManager
     }
     
-    public func test() {
-        print("test()")
-    }
-    
 }
