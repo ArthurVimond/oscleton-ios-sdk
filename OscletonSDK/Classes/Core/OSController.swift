@@ -17,11 +17,11 @@ public class OSController {
     }
     
     public func play() {
-        messageManager.sendMessage(address: LiveAPI.play)
+        messageManager.sendMessage(LiveAPI.play)
     }
     
     public func stop() {
-        messageManager.sendMessage(address: LiveAPI.stop)
+        messageManager.sendMessage(LiveAPI.stop)
     }
     
 }
