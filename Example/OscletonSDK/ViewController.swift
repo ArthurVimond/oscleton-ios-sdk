@@ -18,7 +18,10 @@ class ViewController: UIViewController {
         
         OscletonSDK.instance.initialize()
         
-        OscletonSDK.instance.receiver.rx.test()
+        let result = OscletonSDK.instance.configuration.setComputerIP(ip: "192.168.4.186")
+        if result == .error {
+            print("Unable to setComputerIP()")
+        }
         
     }
 
