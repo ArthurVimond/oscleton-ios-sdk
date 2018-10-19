@@ -15,6 +15,12 @@ public class OSReactiveReceiver {
         get { return liveSetDataManager.tempo }
     }
     
+    public var deviceParameter: Observable<OSDeviceParameter> {
+        get { return liveSetDataManager.deviceParameter }
+    }
+    
+    // Private properties
+    
     private let liveSetDataManager: LiveSetDataManager
     
     init(liveSetDataManager: LiveSetDataManager) {
