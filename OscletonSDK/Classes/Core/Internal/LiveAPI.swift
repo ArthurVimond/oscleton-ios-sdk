@@ -23,4 +23,8 @@ struct LiveAPI {
     static let play = live + "play"
     static let stop = live + "stop"
     
+    // Devices
+    
+    static let trackDeviceParam = live + "track/device/param"
+    
 }
