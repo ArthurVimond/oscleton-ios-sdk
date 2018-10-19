@@ -1,30 +1,143 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="UwG-xD-13L">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="ufC-wZ-h7g">
+        <!--Home ViewController-->
+        <scene sceneID="BgH-ec-nsS">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="OscletonSDK_Example" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
-                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <tableViewController id="Xme-bO-Qhl" userLabel="Home ViewController" customClass="HomeViewController" customModule="OscletonSDK_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="vCn-hK-FLI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HomeTableViewCell" id="OYs-BM-oBr" customClass="HomeTableViewCell" customModule="OscletonSDK_Example" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OYs-BM-oBr" id="W5V-SD-EH7">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Configuration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vV7-vJ-nIi" userLabel="Title Label">
+                                            <rect key="frame" x="16" y="11.5" width="343" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="vV7-vJ-nIi" firstAttribute="leading" secondItem="W5V-SD-EH7" secondAttribute="leading" constant="16" id="1Su-MR-0tz"/>
+                                        <constraint firstAttribute="trailing" secondItem="vV7-vJ-nIi" secondAttribute="trailing" constant="16" id="5G7-I8-u44"/>
+                                        <constraint firstItem="vV7-vJ-nIi" firstAttribute="centerY" secondItem="W5V-SD-EH7" secondAttribute="centerY" id="S19-wM-053"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="titleLabel" destination="vV7-vJ-nIi" id="hiK-u9-rRZ"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Xme-bO-Qhl" id="Jtj-p9-KUp"/>
+                            <outlet property="delegate" destination="Xme-bO-Qhl" id="JZd-Re-3Ip"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Oscleton SDK" id="8kg-3I-zYu" userLabel="NavigationBar">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="M1N-b6-fYN"/>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="m2P-Uf-6bc" kind="show" identifier="goToController" id="nag-6F-d3m"/>
+                        <segue destination="QOI-TV-l4X" kind="show" identifier="goToReceiver" id="6vq-cQ-9MJ"/>
+                        <segue destination="ZDh-08-Ejc" kind="show" identifier="goToConfiguration" id="kaj-TX-ja0"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xPT-Du-Tkk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="972" y="-401"/>
+        </scene>
+        <!--Receiver ViewController-->
+        <scene sceneID="eKq-Zd-Gzh">
+            <objects>
+                <viewController id="QOI-TV-l4X" userLabel="Receiver ViewController" customClass="ReceiverViewController" customModule="OscletonSDK_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6nN-Rf-lFn"/>
+                        <viewControllerLayoutGuide type="bottom" id="oK2-UB-Vun"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="IFh-sw-fH3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Receiver" id="I9N-bp-vcA"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ox5-lX-0lv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="972" y="381"/>
+        </scene>
+        <!--Configuration ViewController-->
+        <scene sceneID="RQe-qp-WLL">
+            <objects>
+                <viewController id="ZDh-08-Ejc" userLabel="Configuration ViewController" customClass="ConfigurationViewController" customModule="OscletonSDK_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WGc-cP-0tr"/>
+                        <viewControllerLayoutGuide type="bottom" id="jMk-Zy-kZ4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bQC-cs-Wea">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Configuration" id="kVE-Nk-IbL"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NjJ-5B-wye" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1804" y="381"/>
+        </scene>
+        <!--Controller ViewController-->
+        <scene sceneID="RoV-YT-FqA">
+            <objects>
+                <viewController id="m2P-Uf-6bc" userLabel="Controller ViewController" customClass="ControllerViewController" customModule="OscletonSDK_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UXt-2A-pu9"/>
+                        <viewControllerLayoutGuide type="bottom" id="EnN-dk-EIa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bUW-Un-dyB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Controller" id="jN9-N8-nga"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0By-gV-5fJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="151" y="381"/>
+        </scene>
+        <!--NavigationController-->
+        <scene sceneID="f7J-kZ-zR1">
+            <objects>
+                <navigationController id="UwG-xD-13L" userLabel="NavigationController" customClass="NavigationController" customModule="OscletonSDK_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="Oa9-gU-1pX">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.2470588235" green="0.31764705879999999" blue="0.70980392160000005" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Xme-bO-Qhl" kind="relationship" relationship="rootViewController" id="MDb-La-c9s"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="efI-4k-boq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="150" y="-402"/>
         </scene>
     </scenes>
+    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>

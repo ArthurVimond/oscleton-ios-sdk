@@ -1,22 +1,22 @@
 //
-//  ViewController.swift
-//  OscletonSDK
+//  ConfigurationViewController.swift
+//  OscletonSDK_Example
 //
-//  Created by Arthur Vimond on 12/10/2018.
-//  Copyright © 2018 Arthur Vimond. All rights reserved.
+//  Created by Arthur Vimond on 19/10/2018.
+//  Copyright © 2018 CocoaPods. All rights reserved.
 //
 
 import UIKit
+import Foundation
 import OscletonSDK
+import RxSwift
 
-class ViewController: UIViewController {
-
+class ConfigurationViewController : UIViewController {
+    
+    private let bag = DisposeBag()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        print("viewDidLoad")
-        
-        OscletonSDK.instance.initialize()
         
         let result = OscletonSDK.instance.configuration.setComputerIP(ip: "192.168.4.186")
         if result == .error {
@@ -24,6 +24,5 @@ class ViewController: UIViewController {
         }
         
     }
-
+    
 }
-
