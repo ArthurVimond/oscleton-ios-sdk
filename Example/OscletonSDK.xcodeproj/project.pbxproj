@@ -14,6 +14,7 @@
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		8576EF496CA4490C595E80D5 /* Pods_OscletonSDK_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 555A16CD5D0CE9A04A74B2EF /* Pods_OscletonSDK_Example.framework */; };
+		F363B36B2180833C006E6183 /* ReceiverViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F363B36A2180833C006E6183 /* ReceiverViewModel.swift */; };
 		F38EE43D217A12AE003EE4C6 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38EE43A217A12AE003EE4C6 /* HomeTableViewCell.swift */; };
 		F38EE43E217A12AE003EE4C6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38EE43B217A12AE003EE4C6 /* HomeViewController.swift */; };
 		F38EE43F217A12AE003EE4C6 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38EE43C217A12AE003EE4C6 /* NavigationController.swift */; };
@@ -51,7 +52,8 @@
 		907BC7C57E53C11A340531C7 /* Pods-OscletonSDK_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OscletonSDK_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-OscletonSDK_Example/Pods-OscletonSDK_Example.release.xcconfig"; sourceTree = "<group>"; };
 		93B914583CCC8E960FFC22FB /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		9E10E20E90704399AA93F02C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		E5B25E9CCFBDC2F7D6E7F5AA /* OscletonSDK.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = OscletonSDK.podspec; path = ../OscletonSDK.podspec; sourceTree = "<group>"; };
+		E5B25E9CCFBDC2F7D6E7F5AA /* OscletonSDK.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = OscletonSDK.podspec; path = ../OscletonSDK.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		F363B36A2180833C006E6183 /* ReceiverViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiverViewModel.swift; sourceTree = "<group>"; };
 		F38EE43A217A12AE003EE4C6 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		F38EE43B217A12AE003EE4C6 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		F38EE43C217A12AE003EE4C6 /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
@@ -197,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				F38EE448217A19BB003EE4C6 /* ReceiverViewController.swift */,
+				F363B36A2180833C006E6183 /* ReceiverViewModel.swift */,
 			);
 			path = Receiver;
 			sourceTree = "<group>";
@@ -429,6 +432,7 @@
 				F38EE43F217A12AE003EE4C6 /* NavigationController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 				F38EE449217A19BB003EE4C6 /* ReceiverViewController.swift in Sources */,
+				F363B36B2180833C006E6183 /* ReceiverViewModel.swift in Sources */,
 				F38EE441217A13E0003EE4C6 /* HomeViewModel.swift in Sources */,
 				F38EE446217A195A003EE4C6 /* ControllerViewController.swift in Sources */,
 				F38EE43E217A12AE003EE4C6 /* HomeViewController.swift in Sources */,
