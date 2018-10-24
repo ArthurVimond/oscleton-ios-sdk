@@ -23,6 +23,7 @@
 		F38EE449217A19BB003EE4C6 /* ReceiverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38EE448217A19BB003EE4C6 /* ReceiverViewController.swift */; };
 		F38EE44C217A19DD003EE4C6 /* ConfigurationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38EE44B217A19DD003EE4C6 /* ConfigurationViewController.swift */; };
 		F3DFF7212180BB0C006FB041 /* ConfigurationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DFF7202180BB0C006FB041 /* ConfigurationViewModel.swift */; };
+		F3DFF7232180C142006FB041 /* ControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DFF7222180C142006FB041 /* ControllerViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		F38EE448217A19BB003EE4C6 /* ReceiverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceiverViewController.swift; sourceTree = "<group>"; };
 		F38EE44B217A19DD003EE4C6 /* ConfigurationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurationViewController.swift; sourceTree = "<group>"; };
 		F3DFF7202180BB0C006FB041 /* ConfigurationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationViewModel.swift; sourceTree = "<group>"; };
+		F3DFF7222180C142006FB041 /* ControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				F38EE445217A195A003EE4C6 /* ControllerViewController.swift */,
+				F3DFF7222180C142006FB041 /* ControllerViewModel.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -440,6 +443,7 @@
 				F38EE441217A13E0003EE4C6 /* HomeViewModel.swift in Sources */,
 				F38EE446217A195A003EE4C6 /* ControllerViewController.swift in Sources */,
 				F38EE43E217A12AE003EE4C6 /* HomeViewController.swift in Sources */,
+				F3DFF7232180C142006FB041 /* ControllerViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
