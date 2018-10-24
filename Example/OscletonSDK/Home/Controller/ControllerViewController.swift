@@ -10,15 +10,30 @@ import UIKit
 import Foundation
 import OscletonSDK
 import RxSwift
+import RxCocoa
 
 class ControllerViewController : UIViewController {
+    
+    // UI
+    @IBOutlet weak var playButton: UIButton!
+    @IBOutlet weak var stopButton: UIButton!
+    
+    private let viewModel = ControllerViewModel()
     
     private let bag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        OscletonSDK.instance.controller.play()
+        // Play
+        playButton.rx.tap
+            .bind { self.viewModel.play() }
+            .disposed(by: bag)
+        
+        // Stop
+        stopButton.rx.tap
+            .bind { self.viewModel.stop() }
+            .disposed(by: bag)
         
     }
     
