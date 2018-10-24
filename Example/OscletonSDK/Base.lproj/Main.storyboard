@@ -253,9 +253,47 @@
                     <view key="view" contentMode="scaleToFill" id="bQC-cs-Wea">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Computer IP Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jU3-tW-40J" userLabel="IPAddress Title Label">
+                                <rect key="frame" x="16" y="16" width="311" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mKB-Af-BBS" userLabel="IPAddress TextField">
+                                <rect key="frame" x="16" y="45" width="295" height="30"/>
+                                <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pCF-E1-VgJ" userLabel="SetIPAddress Button">
+                                <rect key="frame" x="319" y="45" width="48" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="48" id="Njd-fU-6tq"/>
+                                </constraints>
+                                <state key="normal" title="Set">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="pCF-E1-VgJ" secondAttribute="trailing" constant="8" id="F7h-eI-hvc"/>
+                            <constraint firstItem="mKB-Af-BBS" firstAttribute="leading" secondItem="bQC-cs-Wea" secondAttribute="leading" constant="16" id="G6v-qL-1aM"/>
+                            <constraint firstItem="jU3-tW-40J" firstAttribute="trailing" secondItem="pCF-E1-VgJ" secondAttribute="leading" constant="8" id="Ghr-rR-d6s"/>
+                            <constraint firstItem="jU3-tW-40J" firstAttribute="leading" secondItem="bQC-cs-Wea" secondAttribute="leading" constant="16" id="W1o-7h-sn4"/>
+                            <constraint firstItem="mKB-Af-BBS" firstAttribute="top" secondItem="jU3-tW-40J" secondAttribute="bottom" constant="8" id="Xh7-U1-XOa"/>
+                            <constraint firstItem="jU3-tW-40J" firstAttribute="top" secondItem="WGc-cP-0tr" secondAttribute="bottom" constant="16" id="ZbN-gS-5IU"/>
+                            <constraint firstItem="pCF-E1-VgJ" firstAttribute="top" secondItem="jU3-tW-40J" secondAttribute="bottom" constant="8" id="v7E-6L-PiL"/>
+                            <constraint firstItem="pCF-E1-VgJ" firstAttribute="leading" secondItem="mKB-Af-BBS" secondAttribute="trailing" constant="8" id="wcL-eV-JlP"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Configuration" id="kVE-Nk-IbL"/>
+                    <connections>
+                        <outlet property="ipAddressTextField" destination="mKB-Af-BBS" id="upd-XS-G4v"/>
+                        <outlet property="setIPAddressButton" destination="pCF-E1-VgJ" id="qNn-uZ-r1y"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NjJ-5B-wye" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

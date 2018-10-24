@@ -8,21 +8,40 @@
 
 import UIKit
 import Foundation
-import OscletonSDK
 import RxSwift
+import RxCocoa
 
-class ConfigurationViewController : UIViewController {
+class ConfigurationViewController : UIViewController, UITextFieldDelegate {
+    
+    // UI
+    @IBOutlet weak var ipAddressTextField: UITextField!
+    @IBOutlet weak var setIPAddressButton: UIButton!
+    
+    private let viewModel = ConfigurationViewModel()
     
     private let bag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        ipAddressTextField.delegate = self
+        observeProperties()
+    }
+    
+    private func observeProperties() {
         
-        let result = OscletonSDK.instance.configuration.setComputerIP(ip: "192.168.4.186")
-        if result == .error {
-            print("Unable to setComputerIP()")
-        }
+        // IP address
+        setIPAddressButton.rx.tap
+            .withLatestFrom(ipAddressTextField.rx.text)
+            .filter { $0 != nil }
+            .map { $0! }
+            .bind(to: viewModel.ipAddress)
+            .disposed(by: bag)
         
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
     
 }
