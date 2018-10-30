@@ -19,7 +19,6 @@ class OSCManager : OSCServerDelegate {
     private let address = OSCAddressPattern("/")
     
     init() {
-        print("OSCManager::init")
         
     }
     
