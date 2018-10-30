@@ -7,6 +7,6 @@
 
 import Foundation
 
-public enum OSTrackType {
+@objc public enum OSTrackType: Int {
     case audio, midi
 }
