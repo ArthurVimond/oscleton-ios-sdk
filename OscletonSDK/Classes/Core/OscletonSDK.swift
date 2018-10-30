@@ -10,7 +10,7 @@ import Foundation
 
 // Documentation Generation:
 // cd Example/Pods
-// sourcedocs generate --clean --output-folder ../../OscletonSDK/Doc/ios-reference -- -scheme OscletonSDK
+// sourcedocs generate --clean --output-folder ../../OscletonSDK/Doc/reference/ios -- -scheme OscletonSDK
 
 
 /**
