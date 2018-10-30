@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class OSConfiguration {
+public class OSConfiguration: NSObject {
     
     private let liveSetDataManager: LiveSetDataManager
     private let messageManager: MessageManager
@@ -18,6 +18,7 @@ public class OSConfiguration {
         self.messageManager = messageManager
     }
     
+    @objc(setComputerIP:)
     public func setComputerIP(ip: String) -> OSResult {
         return messageManager.initSender(ip: ip)
     }
