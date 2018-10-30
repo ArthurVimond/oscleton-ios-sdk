@@ -7,18 +7,18 @@
 
 import Foundation
 
-public struct OSDeviceParameter {
+public class OSDeviceParameter: NSObject {
     
-    public var trackIndex: Int
-    public var deviceIndex: Int
-    public var paramIndex: Int
-    public var trackName: String
-    public var deviceName: String
-    public var paramName: String
-    public var displayValue: String
-    public var value: Float
-    public var min: Float
-    public var max: Float
+    @objc public var trackIndex: Int
+    @objc public var deviceIndex: Int
+    @objc public var paramIndex: Int
+    @objc public var trackName: String
+    @objc public var deviceName: String
+    @objc public var paramName: String
+    @objc public var displayValue: String
+    @objc public var value: Float
+    @objc public var min: Float
+    @objc public var max: Float
     
     init(trackIndex: Int,
          deviceIndex: Int,
