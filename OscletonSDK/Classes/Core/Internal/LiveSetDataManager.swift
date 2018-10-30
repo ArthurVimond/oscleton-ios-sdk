@@ -10,7 +10,7 @@ import Foundation
 import SwiftOSC
 import RxSwift
 
-public class LiveSetDataManager {
+class LiveSetDataManager {
     
     var tempo: Observable<Float> {
         return messageManager.oscMessage

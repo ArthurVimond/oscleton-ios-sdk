@@ -9,7 +9,7 @@ import Foundation
 import SwiftOSC
 import RxSwift
 
-public class MessageManager {
+class MessageManager {
     
     var oscMessage: Observable<OSCMessage> {
         return oscManager.oscMessage
