@@ -8,7 +8,9 @@
 
 import Foundation
 
-public class OscletonSDK {
+// Documentation Generation:
+// cd Example/Pods
+// sourcedocs generate --clean --output-folder ../../OscletonSDK/Doc/ios-reference -- -scheme OscletonSDK
     
     public static let instance = OscletonSDK()
     
