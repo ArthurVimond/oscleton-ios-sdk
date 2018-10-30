@@ -7,11 +7,11 @@
 
 import Foundation
 
-public struct OSDevice {
+public class OSDevice: NSObject {
     
-    public var trackIndex: Int
-    public var deviceIndex: Int
-    public var deviceName: String
+    @objc public var trackIndex: Int
+    @objc public var deviceIndex: Int
+    @objc public var deviceName: String
     
     init(trackIndex: Int,
          deviceIndex: Int,
