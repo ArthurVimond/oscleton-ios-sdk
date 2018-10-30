@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class OSController {
+public class OSController: NSObject {
     
     private let messageManager: MessageManager
     
@@ -16,11 +16,11 @@ public class OSController {
         self.messageManager = messageManager
     }
     
-    public func play() {
+    @objc public func play() {
         messageManager.sendMessage(LiveAPI.play)
     }
     
-    public func stop() {
+    @objc public func stop() {
         messageManager.sendMessage(LiveAPI.stop)
     }
     
