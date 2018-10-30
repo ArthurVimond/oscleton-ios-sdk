@@ -14,6 +14,7 @@
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		8576EF496CA4490C595E80D5 /* Pods_OscletonSDK_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 555A16CD5D0CE9A04A74B2EF /* Pods_OscletonSDK_Example.framework */; };
+		F2607BEEFCCFE74C31D97D88 /* Pods_OscletonSDK_Example_Objc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3710ECB2D9C2D9E06B48CA0E /* Pods_OscletonSDK_Example_Objc.framework */; };
 		F363B36B2180833C006E6183 /* ReceiverViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F363B36A2180833C006E6183 /* ReceiverViewModel.swift */; };
 		F38EE43D217A12AE003EE4C6 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38EE43A217A12AE003EE4C6 /* HomeTableViewCell.swift */; };
 		F38EE43E217A12AE003EE4C6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38EE43B217A12AE003EE4C6 /* HomeViewController.swift */; };
@@ -24,6 +25,14 @@
 		F38EE44C217A19DD003EE4C6 /* ConfigurationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38EE44B217A19DD003EE4C6 /* ConfigurationViewController.swift */; };
 		F3DFF7212180BB0C006FB041 /* ConfigurationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DFF7202180BB0C006FB041 /* ConfigurationViewModel.swift */; };
 		F3DFF7232180C142006FB041 /* ControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DFF7222180C142006FB041 /* ControllerViewModel.swift */; };
+		F3EFBEA82187367F00CB7C08 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F3EFBEA72187367F00CB7C08 /* AppDelegate.m */; };
+		F3EFBEAB2187367F00CB7C08 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3EFBEAA2187367F00CB7C08 /* ViewController.m */; };
+		F3EFBEAE2187367F00CB7C08 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3EFBEAC2187367F00CB7C08 /* Main.storyboard */; };
+		F3EFBEB02187368200CB7C08 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3EFBEAF2187368200CB7C08 /* Assets.xcassets */; };
+		F3EFBEB32187368200CB7C08 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3EFBEB12187368200CB7C08 /* LaunchScreen.storyboard */; };
+		F3EFBEB62187368200CB7C08 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F3EFBEB52187368200CB7C08 /* main.m */; };
+		F3EFBEC02187368300CB7C08 /* OscletonSDK_Example_ObjcTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F3EFBEBF2187368300CB7C08 /* OscletonSDK_Example_ObjcTests.m */; };
+		F3EFBECB2187368300CB7C08 /* OscletonSDK_Example_ObjcUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F3EFBECA2187368300CB7C08 /* OscletonSDK_Example_ObjcUITests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,13 +43,30 @@
 			remoteGlobalIDString = 607FACCF1AFB9204008FA782;
 			remoteInfo = OscletonSDK;
 		};
+		F3EFBEBC2187368200CB7C08 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 607FACC81AFB9204008FA782 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F3EFBEA32187367F00CB7C08;
+			remoteInfo = "OscletonSDK-Example-Objc";
+		};
+		F3EFBEC72187368300CB7C08 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 607FACC81AFB9204008FA782 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F3EFBEA32187367F00CB7C08;
+			remoteInfo = "OscletonSDK-Example-Objc";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0210AD4CDF5B3F087ED2DEF9 /* Pods-OscletonSDK-Example-Objc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OscletonSDK-Example-Objc.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OscletonSDK-Example-Objc/Pods-OscletonSDK-Example-Objc.debug.xcconfig"; sourceTree = "<group>"; };
 		0CED17182FCD68AEE45F690E /* Pods_OscletonSDK_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OscletonSDK_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3710ECB2D9C2D9E06B48CA0E /* Pods_OscletonSDK_Example_Objc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OscletonSDK_Example_Objc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A6876C87B91B5A3E5EE795F /* Pods-OscletonSDK_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OscletonSDK_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OscletonSDK_Example/Pods-OscletonSDK_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		555A16CD5D0CE9A04A74B2EF /* Pods_OscletonSDK_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OscletonSDK_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5569150B88EE395439854DEC /* Pods-OscletonSDK_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OscletonSDK_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OscletonSDK_Tests/Pods-OscletonSDK_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		5C7EA868211F86733CBF5C42 /* Pods-OscletonSDK-Example-Objc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OscletonSDK-Example-Objc.release.xcconfig"; path = "Pods/Target Support Files/Pods-OscletonSDK-Example-Objc/Pods-OscletonSDK-Example-Objc.release.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* OscletonSDK_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OscletonSDK_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +91,22 @@
 		F38EE44B217A19DD003EE4C6 /* ConfigurationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurationViewController.swift; sourceTree = "<group>"; };
 		F3DFF7202180BB0C006FB041 /* ConfigurationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationViewModel.swift; sourceTree = "<group>"; };
 		F3DFF7222180C142006FB041 /* ControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerViewModel.swift; sourceTree = "<group>"; };
+		F3EFBEA42187367F00CB7C08 /* OscletonSDK-Example-Objc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OscletonSDK-Example-Objc.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3EFBEA62187367F00CB7C08 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F3EFBEA72187367F00CB7C08 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F3EFBEA92187367F00CB7C08 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		F3EFBEAA2187367F00CB7C08 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F3EFBEAD2187367F00CB7C08 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F3EFBEAF2187368200CB7C08 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F3EFBEB22187368200CB7C08 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F3EFBEB42187368200CB7C08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F3EFBEB52187368200CB7C08 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F3EFBEBB2187368200CB7C08 /* OscletonSDK-Example-ObjcTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "OscletonSDK-Example-ObjcTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3EFBEBF2187368300CB7C08 /* OscletonSDK_Example_ObjcTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OscletonSDK_Example_ObjcTests.m; sourceTree = "<group>"; };
+		F3EFBEC12187368300CB7C08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F3EFBEC62187368300CB7C08 /* OscletonSDK-Example-ObjcUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "OscletonSDK-Example-ObjcUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3EFBECA2187368300CB7C08 /* OscletonSDK_Example_ObjcUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OscletonSDK_Example_ObjcUITests.m; sourceTree = "<group>"; };
+		F3EFBECC2187368300CB7C08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +126,28 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F3EFBEA12187367F00CB7C08 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2607BEEFCCFE74C31D97D88 /* Pods_OscletonSDK_Example_Objc.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3EFBEB82187368200CB7C08 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3EFBEC32187368300CB7C08 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -92,6 +156,7 @@
 			children = (
 				555A16CD5D0CE9A04A74B2EF /* Pods_OscletonSDK_Example.framework */,
 				0CED17182FCD68AEE45F690E /* Pods_OscletonSDK_Tests.framework */,
+				3710ECB2D9C2D9E06B48CA0E /* Pods_OscletonSDK_Example_Objc.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -102,6 +167,9 @@
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACD21AFB9204008FA782 /* Example for OscletonSDK */,
 				607FACE81AFB9204008FA782 /* Tests */,
+				F3EFBEA52187367F00CB7C08 /* OscletonSDK-Example-Objc */,
+				F3EFBEBE2187368300CB7C08 /* OscletonSDK-Example-ObjcTests */,
+				F3EFBEC92187368300CB7C08 /* OscletonSDK-Example-ObjcUITests */,
 				607FACD11AFB9204008FA782 /* Products */,
 				73E84085265F0C1E47C7BD40 /* Pods */,
 				2B7D13455541443D7D89648C /* Frameworks */,
@@ -113,6 +181,9 @@
 			children = (
 				607FACD01AFB9204008FA782 /* OscletonSDK_Example.app */,
 				607FACE51AFB9204008FA782 /* OscletonSDK_Tests.xctest */,
+				F3EFBEA42187367F00CB7C08 /* OscletonSDK-Example-Objc.app */,
+				F3EFBEBB2187368200CB7C08 /* OscletonSDK-Example-ObjcTests.xctest */,
+				F3EFBEC62187368300CB7C08 /* OscletonSDK-Example-ObjcUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -173,6 +244,8 @@
 				907BC7C57E53C11A340531C7 /* Pods-OscletonSDK_Example.release.xcconfig */,
 				6C8722EC5B9541B78DEFCBC3 /* Pods-OscletonSDK_Tests.debug.xcconfig */,
 				5569150B88EE395439854DEC /* Pods-OscletonSDK_Tests.release.xcconfig */,
+				0210AD4CDF5B3F087ED2DEF9 /* Pods-OscletonSDK-Example-Objc.debug.xcconfig */,
+				5C7EA868211F86733CBF5C42 /* Pods-OscletonSDK-Example-Objc.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -219,6 +292,40 @@
 			path = OscletonSDK/Home/Configuration;
 			sourceTree = SOURCE_ROOT;
 		};
+		F3EFBEA52187367F00CB7C08 /* OscletonSDK-Example-Objc */ = {
+			isa = PBXGroup;
+			children = (
+				F3EFBEA62187367F00CB7C08 /* AppDelegate.h */,
+				F3EFBEA72187367F00CB7C08 /* AppDelegate.m */,
+				F3EFBEA92187367F00CB7C08 /* ViewController.h */,
+				F3EFBEAA2187367F00CB7C08 /* ViewController.m */,
+				F3EFBEAC2187367F00CB7C08 /* Main.storyboard */,
+				F3EFBEAF2187368200CB7C08 /* Assets.xcassets */,
+				F3EFBEB12187368200CB7C08 /* LaunchScreen.storyboard */,
+				F3EFBEB42187368200CB7C08 /* Info.plist */,
+				F3EFBEB52187368200CB7C08 /* main.m */,
+			);
+			path = "OscletonSDK-Example-Objc";
+			sourceTree = "<group>";
+		};
+		F3EFBEBE2187368300CB7C08 /* OscletonSDK-Example-ObjcTests */ = {
+			isa = PBXGroup;
+			children = (
+				F3EFBEBF2187368300CB7C08 /* OscletonSDK_Example_ObjcTests.m */,
+				F3EFBEC12187368300CB7C08 /* Info.plist */,
+			);
+			path = "OscletonSDK-Example-ObjcTests";
+			sourceTree = "<group>";
+		};
+		F3EFBEC92187368300CB7C08 /* OscletonSDK-Example-ObjcUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F3EFBECA2187368300CB7C08 /* OscletonSDK_Example_ObjcUITests.m */,
+				F3EFBECC2187368300CB7C08 /* Info.plist */,
+			);
+			path = "OscletonSDK-Example-ObjcUITests";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -261,6 +368,61 @@
 			productReference = 607FACE51AFB9204008FA782 /* OscletonSDK_Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		F3EFBEA32187367F00CB7C08 /* OscletonSDK-Example-Objc */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F3EFBECD2187368300CB7C08 /* Build configuration list for PBXNativeTarget "OscletonSDK-Example-Objc" */;
+			buildPhases = (
+				BF9B24A04115759783A0AAB1 /* [CP] Check Pods Manifest.lock */,
+				F3EFBEA02187367F00CB7C08 /* Sources */,
+				F3EFBEA12187367F00CB7C08 /* Frameworks */,
+				F3EFBEA22187367F00CB7C08 /* Resources */,
+				981669A6D5C949AF95735D3E /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "OscletonSDK-Example-Objc";
+			productName = "OscletonSDK-Example-Objc";
+			productReference = F3EFBEA42187367F00CB7C08 /* OscletonSDK-Example-Objc.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F3EFBEBA2187368200CB7C08 /* OscletonSDK-Example-ObjcTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F3EFBED02187368300CB7C08 /* Build configuration list for PBXNativeTarget "OscletonSDK-Example-ObjcTests" */;
+			buildPhases = (
+				F3EFBEB72187368200CB7C08 /* Sources */,
+				F3EFBEB82187368200CB7C08 /* Frameworks */,
+				F3EFBEB92187368200CB7C08 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F3EFBEBD2187368200CB7C08 /* PBXTargetDependency */,
+			);
+			name = "OscletonSDK-Example-ObjcTests";
+			productName = "OscletonSDK-Example-ObjcTests";
+			productReference = F3EFBEBB2187368200CB7C08 /* OscletonSDK-Example-ObjcTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F3EFBEC52187368300CB7C08 /* OscletonSDK-Example-ObjcUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F3EFBED32187368300CB7C08 /* Build configuration list for PBXNativeTarget "OscletonSDK-Example-ObjcUITests" */;
+			buildPhases = (
+				F3EFBEC22187368300CB7C08 /* Sources */,
+				F3EFBEC32187368300CB7C08 /* Frameworks */,
+				F3EFBEC42187368300CB7C08 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F3EFBEC82187368300CB7C08 /* PBXTargetDependency */,
+			);
+			name = "OscletonSDK-Example-ObjcUITests";
+			productName = "OscletonSDK-Example-ObjcUITests";
+			productReference = F3EFBEC62187368300CB7C08 /* OscletonSDK-Example-ObjcUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -274,13 +436,30 @@
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
 						DevelopmentTeam = 54PJPCWSAT;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 1000;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
 						DevelopmentTeam = 54PJPCWSAT;
 						LastSwiftMigration = 0900;
 						TestTargetID = 607FACCF1AFB9204008FA782;
+					};
+					F3EFBEA32187367F00CB7C08 = {
+						CreatedOnToolsVersion = 10.0;
+						DevelopmentTeam = 54PJPCWSAT;
+						ProvisioningStyle = Automatic;
+					};
+					F3EFBEBA2187368200CB7C08 = {
+						CreatedOnToolsVersion = 10.0;
+						DevelopmentTeam = 54PJPCWSAT;
+						ProvisioningStyle = Automatic;
+						TestTargetID = F3EFBEA32187367F00CB7C08;
+					};
+					F3EFBEC52187368300CB7C08 = {
+						CreatedOnToolsVersion = 10.0;
+						DevelopmentTeam = 54PJPCWSAT;
+						ProvisioningStyle = Automatic;
+						TestTargetID = F3EFBEA32187367F00CB7C08;
 					};
 				};
 			};
@@ -299,6 +478,9 @@
 			targets = (
 				607FACCF1AFB9204008FA782 /* OscletonSDK_Example */,
 				607FACE41AFB9204008FA782 /* OscletonSDK_Tests */,
+				F3EFBEA32187367F00CB7C08 /* OscletonSDK-Example-Objc */,
+				F3EFBEBA2187368200CB7C08 /* OscletonSDK-Example-ObjcTests */,
+				F3EFBEC52187368300CB7C08 /* OscletonSDK-Example-ObjcUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -315,6 +497,30 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		607FACE31AFB9204008FA782 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3EFBEA22187367F00CB7C08 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3EFBEB32187368200CB7C08 /* LaunchScreen.storyboard in Resources */,
+				F3EFBEB02187368200CB7C08 /* Assets.xcassets in Resources */,
+				F3EFBEAE2187367F00CB7C08 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3EFBEB92187368200CB7C08 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3EFBEC42187368300CB7C08 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -398,6 +604,36 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		981669A6D5C949AF95735D3E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-OscletonSDK-Example-Objc/Pods-OscletonSDK-Example-Objc-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/OscletonSDK/OscletonSDK.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftOSC/SwiftOSC.framework",
+				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OscletonSDK.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftOSC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OscletonSDK-Example-Objc/Pods-OscletonSDK-Example-Objc-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		A057C28654E61B0470F4A611 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -424,6 +660,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OscletonSDK_Tests/Pods-OscletonSDK_Tests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BF9B24A04115759783A0AAB1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OscletonSDK-Example-Objc-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -455,6 +713,32 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F3EFBEA02187367F00CB7C08 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3EFBEAB2187367F00CB7C08 /* ViewController.m in Sources */,
+				F3EFBEB62187368200CB7C08 /* main.m in Sources */,
+				F3EFBEA82187367F00CB7C08 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3EFBEB72187368200CB7C08 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3EFBEC02187368300CB7C08 /* OscletonSDK_Example_ObjcTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3EFBEC22187368300CB7C08 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3EFBECB2187368300CB7C08 /* OscletonSDK_Example_ObjcUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -462,6 +746,16 @@
 			isa = PBXTargetDependency;
 			target = 607FACCF1AFB9204008FA782 /* OscletonSDK_Example */;
 			targetProxy = 607FACE61AFB9204008FA782 /* PBXContainerItemProxy */;
+		};
+		F3EFBEBD2187368200CB7C08 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F3EFBEA32187367F00CB7C08 /* OscletonSDK-Example-Objc */;
+			targetProxy = F3EFBEBC2187368200CB7C08 /* PBXContainerItemProxy */;
+		};
+		F3EFBEC82187368300CB7C08 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F3EFBEA32187367F00CB7C08 /* OscletonSDK-Example-Objc */;
+			targetProxy = F3EFBEC72187368300CB7C08 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -480,6 +774,22 @@
 				607FACDF1AFB9204008FA782 /* Base */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		F3EFBEAC2187367F00CB7C08 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F3EFBEAD2187367F00CB7C08 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F3EFBEB12187368200CB7C08 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F3EFBEB22187368200CB7C08 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -589,12 +899,14 @@
 			baseConfigurationReference = 4A6876C87B91B5A3E5EE795F /* Pods-OscletonSDK_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 54PJPCWSAT;
 				INFOPLIST_FILE = OscletonSDK/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 			};
@@ -605,6 +917,7 @@
 			baseConfigurationReference = 907BC7C57E53C11A340531C7 /* Pods-OscletonSDK_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 54PJPCWSAT;
 				INFOPLIST_FILE = OscletonSDK/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -660,6 +973,172 @@
 			};
 			name = Release;
 		};
+		F3EFBECE2187368300CB7C08 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0210AD4CDF5B3F087ED2DEF9 /* Pods-OscletonSDK-Example-Objc.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 54PJPCWSAT;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "OscletonSDK-Example-Objc/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.oscleton.sdk.OscletonSDK-Example-Objc";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F3EFBECF2187368300CB7C08 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C7EA868211F86733CBF5C42 /* Pods-OscletonSDK-Example-Objc.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 54PJPCWSAT;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "OscletonSDK-Example-Objc/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.oscleton.sdk.OscletonSDK-Example-Objc";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F3EFBED12187368300CB7C08 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 54PJPCWSAT;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "OscletonSDK-Example-ObjcTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.oscleton.sdk.OscletonSDK-Example-ObjcTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OscletonSDK-Example-Objc.app/OscletonSDK-Example-Objc";
+			};
+			name = Debug;
+		};
+		F3EFBED22187368300CB7C08 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 54PJPCWSAT;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "OscletonSDK-Example-ObjcTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.oscleton.sdk.OscletonSDK-Example-ObjcTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OscletonSDK-Example-Objc.app/OscletonSDK-Example-Objc";
+			};
+			name = Release;
+		};
+		F3EFBED42187368300CB7C08 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 54PJPCWSAT;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "OscletonSDK-Example-ObjcUITests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.oscleton.sdk.OscletonSDK-Example-ObjcUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "OscletonSDK-Example-Objc";
+			};
+			name = Debug;
+		};
+		F3EFBED52187368300CB7C08 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 54PJPCWSAT;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "OscletonSDK-Example-ObjcUITests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.oscleton.sdk.OscletonSDK-Example-ObjcUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "OscletonSDK-Example-Objc";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -686,6 +1165,33 @@
 			buildConfigurations = (
 				607FACF31AFB9204008FA782 /* Debug */,
 				607FACF41AFB9204008FA782 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F3EFBECD2187368300CB7C08 /* Build configuration list for PBXNativeTarget "OscletonSDK-Example-Objc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3EFBECE2187368300CB7C08 /* Debug */,
+				F3EFBECF2187368300CB7C08 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F3EFBED02187368300CB7C08 /* Build configuration list for PBXNativeTarget "OscletonSDK-Example-ObjcTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3EFBED12187368300CB7C08 /* Debug */,
+				F3EFBED22187368300CB7C08 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F3EFBED32187368300CB7C08 /* Build configuration list for PBXNativeTarget "OscletonSDK-Example-ObjcUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3EFBED42187368300CB7C08 /* Debug */,
+				F3EFBED52187368300CB7C08 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
