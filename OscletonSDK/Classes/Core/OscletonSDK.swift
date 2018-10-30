@@ -11,18 +11,36 @@ import Foundation
 // Documentation Generation:
 // cd Example/Pods
 // sourcedocs generate --clean --output-folder ../../OscletonSDK/Doc/ios-reference -- -scheme OscletonSDK
+
+
+/**
+ The main entry point to use Oscleton SDK.
+ 
+ This singleton provides multiple features splitted in different classes:
+ - OSConfiguration is responsible for the settings needed to establish the connection.
+ - OSController lets you control a Live set from your iOS device.
+ - OSReceiver lets you receive Live set events in real time on your iOS device.
+ 
+ Since: 0.1
+ */
+public class OscletonSDK: NSObject {
     
-    public static let instance = OscletonSDK()
+    @objc public static let instance = OscletonSDK()
     
+    /// OSConfiguration is responsible for the settings needed to establish the connection.
+    @objc public private(set) var configuration: OSConfiguration
+    
+    /// OSController lets you control a Live set from your iOS device.
+    @objc public private(set) var controller: OSController
+    
+    /// OSReceiver lets you receive Live set events in real time on your iOS device.
+    @objc public private(set) var receiver: OSReceiver
+    
+    // Private properties
     private let dependencyProvider = DependencyProvider()
-    
-    public private(set) var configuration: OSConfiguration
-    public private(set) var controller: OSController
-    public private(set) var receiver: OSReceiver
-    
     private let messageManager: MessageManager
     
-    private init() {
+    private override init() {
         print("OscletonSDK::init")
         configuration = dependencyProvider.provideConfiguration()
         controller = dependencyProvider.provideController()
@@ -30,34 +48,34 @@ import Foundation
         messageManager = dependencyProvider.provideMessageManager()
     }
     
-    public func initialize() {
+    @objc public func initialize() {
         
     }
     
-    public func connect() {
+    @objc public func connect() {
         messageManager.connect()
     }
     
-    public func disconnect() {
+    @objc public func disconnect() {
         messageManager.disconnect()
     }
     
-    public func startListening() {
+    @objc public func startListening() {
         messageManager.startListening()
     }
     
-    public func stopListening() {
+    @objc public func stopListening() {
         messageManager.stopListening()
     }
     
     // Lifecycle
     
-    public func applicationDidBecomeActive() {
+    @objc public func applicationDidBecomeActive() {
         connect()
         startListening()
     }
     
-    public func applicationWillResignActive() {
+    @objc public func applicationWillResignActive() {
         stopListening()
         disconnect()
     }
