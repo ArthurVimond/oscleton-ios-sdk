@@ -7,16 +7,16 @@
 
 import Foundation
 
-public struct OSTrack {
+public class OSTrack: NSObject {
     
-    public var index: Int
-    public var name: String
-    public var type: OSTrackType
-    public var volume: Float
-    public var pan: Float
-    public var arm: Int
-    public var mute: Int
-    public var solo: Int
+    @objc public var index: Int
+    @objc public var name: String
+    @objc public var type: OSTrackType
+    @objc public var volume: Float
+    @objc public var pan: Float
+    @objc public var arm: Int
+    @objc public var mute: Int
+    @objc public var solo: Int
     
     init(index: Int,
          name: String = "",
