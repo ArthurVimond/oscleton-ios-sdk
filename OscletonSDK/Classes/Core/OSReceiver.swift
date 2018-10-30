@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class OSReceiver {
+public class OSReceiver: NSObject {
     
     public private(set) var rx: OSReactiveReceiver
     
