@@ -26,12 +26,18 @@ class DependencyProvider {
         }.inObjectScope(.container)
         
         container.register(OSReceiver.self) { r in
-            OSReceiver(rx: r.resolve(OSReactiveReceiver.self)!)
+            let reactiveReceiver = r.resolve(OSReactiveReceiver.self)!
+            let callbackReceiver = r.resolve(OSCallbackReceiver.self)!
+            return OSReceiver(rx: reactiveReceiver, cb: callbackReceiver)
         }.inObjectScope(.container)
         
         container.register(OSReactiveReceiver.self) { r in
             OSReactiveReceiver(liveSetDataManager: r.resolve(LiveSetDataManager.self)!)
         }.inObjectScope(.container)
+        
+        container.register(OSCallbackReceiver.self) { r in
+            OSCallbackReceiver(liveSetDataManager: r.resolve(LiveSetDataManager.self)!)
+            }.inObjectScope(.container)
         
         container.register(LiveSetDataManager.self) { r in
             LiveSetDataManager(messageManager: r.resolve(MessageManager.self)!)
