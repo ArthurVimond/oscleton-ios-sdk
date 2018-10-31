@@ -25,16 +25,20 @@ import Foundation
  */
 public class OscletonSDK: NSObject {
     
-    @objc public static let instance = OscletonSDK()
+    @objc
+    public static let instance = OscletonSDK()
     
     /// OSConfiguration is responsible for the settings needed to establish the connection.
-    @objc public private(set) var configuration: OSConfiguration
+    @objc
+    public private(set) var configuration: OSConfiguration
     
     /// OSController lets you control a Live set from your iOS device.
-    @objc public private(set) var controller: OSController
+    @objc
+    public private(set) var controller: OSController
     
     /// OSReceiver lets you receive Live set events in real time on your iOS device.
-    @objc public private(set) var receiver: OSReceiver
+    @objc
+    public private(set) var receiver: OSReceiver
     
     // Private properties
     private let dependencyProvider = DependencyProvider()
@@ -48,34 +52,41 @@ public class OscletonSDK: NSObject {
         messageManager = dependencyProvider.provideMessageManager()
     }
     
-    @objc public func initialize() {
+    @objc
+    public func initialize() {
         
     }
     
-    @objc public func connect() {
+    @objc
+    public func connect() {
         messageManager.connect()
     }
     
-    @objc public func disconnect() {
+    @objc
+    public func disconnect() {
         messageManager.disconnect()
     }
     
-    @objc public func startListening() {
+    @objc
+    public func startListening() {
         messageManager.startListening()
     }
     
-    @objc public func stopListening() {
+    @objc
+    public func stopListening() {
         messageManager.stopListening()
     }
     
     // Lifecycle
     
-    @objc public func applicationDidBecomeActive() {
+    @objc
+    public func applicationDidBecomeActive() {
         connect()
         startListening()
     }
     
-    @objc public func applicationWillResignActive() {
+    @objc
+    public func applicationWillResignActive() {
         stopListening()
         disconnect()
     }
