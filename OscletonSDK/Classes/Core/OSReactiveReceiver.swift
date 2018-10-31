@@ -9,6 +9,13 @@
 import Foundation
 import RxSwift
 
+/**
+ OSReactiveReceiver contains RxSwift Observables reacting to the Live set data changes.
+ 
+ If a reactive approach doesn't fit your needs, consider implementing [OSCallbackReceiver](../OSCallbackReceiver) instead.
+ 
+ Since: 0.1
+ */
 public class OSReactiveReceiver: NSObject {
     
     public var tempo: Observable<Float> {
