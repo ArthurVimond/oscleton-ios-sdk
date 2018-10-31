@@ -18,11 +18,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [[[OscletonSDK instance] controller] play];
-    OSResult result = [[[OscletonSDK instance] configuration] setComputerIP:@"192"];
-    if (result == OSResultError) {
-
-    }
     
 }
 
