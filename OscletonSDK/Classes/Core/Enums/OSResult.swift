@@ -7,6 +7,7 @@
 
 import Foundation
 
-@objc public enum OSResult: Int {
+@objc
+public enum OSResult: Int {
     case success, error
 }
