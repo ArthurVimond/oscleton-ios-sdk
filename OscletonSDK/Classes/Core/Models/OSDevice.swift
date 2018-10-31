@@ -9,9 +9,14 @@ import Foundation
 
 public class OSDevice: NSObject {
     
-    @objc public var trackIndex: Int
-    @objc public var deviceIndex: Int
-    @objc public var deviceName: String
+    @objc
+    public var trackIndex: Int
+    
+    @objc
+    public var deviceIndex: Int
+    
+    @objc
+    public var deviceName: String
     
     init(trackIndex: Int,
          deviceIndex: Int,
