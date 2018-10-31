@@ -17,8 +17,12 @@ public class OSReceiver: NSObject {
     
     public private(set) var rx: OSReactiveReceiver
     
-    init(rx: OSReactiveReceiver) {
+    @objc
+    public private(set) var cb: OSCallbackReceiver
+    
+    init(rx: OSReactiveReceiver, cb: OSCallbackReceiver) {
         self.rx = rx
+        self.cb = cb
     }
     
 }
