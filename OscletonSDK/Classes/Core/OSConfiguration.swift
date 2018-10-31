@@ -8,6 +8,13 @@
 
 import Foundation
 
+/**
+ OSConfiguration is responsible for the SDK settings,
+ like the IP address in order to establish the connection between
+ the Android device and the computer running Live.
+ 
+ Since: 0.1
+ */
 public class OSConfiguration: NSObject {
     
     private let liveSetDataManager: LiveSetDataManager
