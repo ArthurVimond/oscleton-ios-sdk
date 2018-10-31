@@ -17,9 +17,9 @@ import Foundation
  The main entry point to use Oscleton SDK.
  
  This singleton provides multiple features splitted in different classes:
- - OSConfiguration is responsible for the settings needed to establish the connection.
- - OSController lets you control a Live set from your iOS device.
- - OSReceiver lets you receive Live set events in real time on your iOS device.
+ - [OSConfiguration](../OSConfiguration) is responsible for the settings needed to establish the connection.
+ - [OSController](../OSController) lets you control a Live set from your iOS device.
+ - [OSReceiver](../OSReceiver) lets you receive Live set events in real time on your iOS device.
  
  Since: 0.1
  */
