@@ -25,6 +25,7 @@ import Foundation
  */
 public class OscletonSDK: NSObject {
     
+    /// The singleton instance of Oscleton SDK.
     @objc
     public static let instance = OscletonSDK()
     
@@ -52,26 +53,66 @@ public class OscletonSDK: NSObject {
         messageManager = dependencyProvider.provideMessageManager()
     }
     
+    /**
+     Initialize the SDK.
+     
+     This method must be called at application launch,
+     in the app delegate's `application:didFinishLaunchingWithOptions:` method.
+     
+     Since: 0.1
+     */
     @objc
     public func initialize() {
         
     }
     
+    /**
+     Connect the device and prepare to listen for incoming changes.
+     
+     If `applicationDidBecomeActive()` is called in the app delegate,
+     this method is automatically called when the app goes to foreground.
+     
+     Since: 0.1
+     */
     @objc
     public func connect() {
         messageManager.connect()
     }
     
+    /**
+     Disconnect the device and close the incoming changes listener.
+     
+     If `applicationWillResignActive()` is called in the app delegate,
+     this method is automatically called when the app goes to background.
+     
+     Since: 0.1
+     */
     @objc
     public func disconnect() {
         messageManager.disconnect()
     }
     
+    /**
+     Start listening for incoming changes.
+     
+     If `applicationDidBecomeActive()` is called in the app delegate,
+     this method is automatically called when the app goes to foreground.
+     
+     Since: 0.1
+     */
     @objc
     public func startListening() {
         messageManager.startListening()
     }
     
+    /**
+     Stop listening for incoming changes.
+     
+     If `applicationWillResignActive()` is called in the app delegate,
+     this method is automatically called when the app goes to background.
+     
+     Since: 0.1
+     */
     @objc
     public func stopListening() {
         messageManager.stopListening()
