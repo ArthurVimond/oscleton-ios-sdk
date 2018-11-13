@@ -7,29 +7,42 @@
 
 import Foundation
 
+/**
+ Data class representing a Live track.
+ 
+ - Since: 0.1
+ */
 public class OSTrack: NSObject {
     
+    /// The track position in the Live set
     @objc
     public var index: Int
     
+    /// The track name
     @objc
     public var name: String
     
+    /// The track type
     @objc
     public var type: OSTrackType
     
+    /// The track volume
     @objc
     public var volume: Float
     
+    /// The track panning
     @objc
     public var pan: Float
     
+    /// The track arm state
     @objc
     public var arm: Int
     
+    /// The track mute state
     @objc
     public var mute: Int
     
+    /// The track solo state
     @objc
     public var solo: Int
     
