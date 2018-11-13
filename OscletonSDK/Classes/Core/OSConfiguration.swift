@@ -13,7 +13,7 @@ import Foundation
  like the IP address in order to establish the connection between
  the Android device and the computer running Live.
  
- Since: 0.1
+ - Since: 0.1
  */
 public class OSConfiguration: NSObject {
     
