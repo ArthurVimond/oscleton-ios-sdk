@@ -7,14 +7,22 @@
 
 import Foundation
 
+/**
+ Data class representing a Live device.
+ 
+ - Since: 0.1
+ */
 public class OSDevice: NSObject {
     
+    /// The track position in the Live set
     @objc
     public var trackIndex: Int
     
+    /// The device position in the track
     @objc
     public var deviceIndex: Int
     
+    /// The device name
     @objc
     public var deviceName: String
     
