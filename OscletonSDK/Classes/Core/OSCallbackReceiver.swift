@@ -32,7 +32,7 @@ public class OSCallbackReceiver: NSObject {
     /**
      Register a callback to be invoked when the general tempo changes.
      
-     - Parameter listener: The callback that will run
+     - Parameter onChange: The callback that will run
      - Since: 0.1
      */
     @objc(setOnTempoChangeCallback:)
@@ -47,7 +47,7 @@ public class OSCallbackReceiver: NSObject {
     /**
      Register a callback to be invoked when device parameter changes.
      
-     - Parameter listener: The callback that will run
+     - Parameter onChange: The callback that will run
      - Since: 0.1
      */
     @objc(setOnDeviceParameterChangeCallback:)
