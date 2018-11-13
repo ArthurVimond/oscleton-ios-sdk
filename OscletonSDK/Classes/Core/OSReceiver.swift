@@ -11,12 +11,14 @@ import Foundation
 /**
  OSReceiver is just a container class to access [OSReactiveReceiver](../OSReactiveReceiver) and [OSCallbackReceiver](../OSCallbackReceiver).
  
- Since: 0.1
+ - Since: 0.1
  */
 public class OSReceiver: NSObject {
     
+    /// The OSReactiveReceiver containing RxSwift Observables. Only available for Swift.
     public private(set) var rx: OSReactiveReceiver
     
+    /// The OSCallbackReceiver containing callbacks. Both available for Swift and Objective-C.
     @objc
     public private(set) var cb: OSCallbackReceiver
     
