@@ -7,7 +7,13 @@
 
 import Foundation
 
+/**
+ Enum class representing Oscleton SDK result.
+ 
+ - Since: 0.1
+ */
 @objc
 public enum OSResult: Int {
-    case success, error
+    case success
+    case error
 }
