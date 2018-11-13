@@ -11,7 +11,7 @@ import Foundation
 /**
  OSController contains the methods to control the current Live set.
  
- Since: 0.1
+ - Since: 0.1
  */
 public class OSController: NSObject {
     
