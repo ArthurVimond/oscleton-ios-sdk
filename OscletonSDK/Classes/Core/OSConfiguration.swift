@@ -25,6 +25,14 @@ public class OSConfiguration: NSObject {
         self.messageManager = messageManager
     }
     
+    /**
+     Set the computer IP address in order to send actions.
+     
+     NB: The default port is 9000.
+     
+     - Parameter ip: the IP address of the computer running Ableton Live
+     - Returns: the SDK result
+     */
     @objc(setComputerIP:)
     public func setComputerIP(ip: String) -> OSResult {
         return messageManager.initSender(ip: ip)
