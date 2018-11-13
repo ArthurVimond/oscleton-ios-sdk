@@ -13,7 +13,7 @@ import RxSwift
  
  If you prefer using a reactive approach, consider implementing [OSReactiveReceiver](../OSReactiveReceiver) instead.
  
- Since: 0.1
+ - Since: 0.1
  */
 public class OSCallbackReceiver: NSObject {
     
@@ -29,6 +29,12 @@ public class OSCallbackReceiver: NSObject {
         self.liveSetDataManager = liveSetDataManager
     }
     
+    /**
+     Register a callback to be invoked when the general tempo changes.
+     
+     - Parameter listener: The callback that will run
+     - Since: 0.1
+     */
     @objc(setOnTempoChangeCallback:)
     public func setOnTempoChangeCallback(onChange: @escaping (Float) -> Void) {
         tempoDisp = liveSetDataManager.tempo
@@ -38,6 +44,12 @@ public class OSCallbackReceiver: NSObject {
         _ = compositeDisposable.insert(tempoDisp!)
     }
     
+    /**
+     Register a callback to be invoked when device parameter changes.
+     
+     - Parameter listener: The callback that will run
+     - Since: 0.1
+     */
     @objc(setOnDeviceParameterChangeCallback:)
     public func setOnDeviceParameterChangeCallback(onChange: @escaping (OSDeviceParameter) -> Void) {
         deviceParameterDisp = liveSetDataManager.deviceParameter
@@ -47,16 +59,31 @@ public class OSCallbackReceiver: NSObject {
         _ = compositeDisposable.insert(deviceParameterDisp!)
     }
     
+    /**
+     Remove the current tempo change callback.
+     
+     - Since: 0.1
+     */
     @objc
     public func removeOnTempoChangeCallback() {
         tempoDisp?.dispose()
     }
     
+    /**
+     Remove the current device parameter change callback.
+     
+     - Since: 0.1
+     */
     @objc
     public func removeOnDeviceParameterChangeCallback() {
         deviceParameterDisp?.dispose()
     }
     
+    /**
+     Remove all callbacks.
+     
+     - Since: 0.1
+     */
     @objc
     public func removeAllCallbacks() {
         compositeDisposable.dispose()
