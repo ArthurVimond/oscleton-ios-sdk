@@ -21,11 +21,21 @@ public class OSController: NSObject {
         self.messageManager = messageManager
     }
     
+    /**
+     Start playing the current Live set.
+     
+     - Since: 0.1
+     */
     @objc
     public func play() {
         messageManager.sendMessage(LiveAPI.play)
     }
     
+    /**
+     Stop playing the current Live set.
+     
+     - Since: 0.1
+     */
     @objc
     public func stop() {
         messageManager.sendMessage(LiveAPI.stop)
