@@ -7,7 +7,13 @@
 
 import Foundation
 
+/**
+ Enum class representing a Live track type.
+ 
+ - Since: 0.1
+ */
 @objc
 public enum OSTrackType: Int {
-    case audio, midi
+    case audio
+    case midi
 }
