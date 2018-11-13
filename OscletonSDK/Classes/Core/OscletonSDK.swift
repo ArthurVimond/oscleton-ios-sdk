@@ -21,7 +21,7 @@ import Foundation
  - [OSController](../OSController) lets you control a Live set from your iOS device.
  - [OSReceiver](../OSReceiver) lets you receive Live set events in real time on your iOS device.
  
- Since: 0.1
+ - Since: 0.1
  */
 public class OscletonSDK: NSObject {
     
@@ -59,7 +59,7 @@ public class OscletonSDK: NSObject {
      This method must be called at application launch,
      in the app delegate's `application:didFinishLaunchingWithOptions:` method.
      
-     Since: 0.1
+     - Since: 0.1
      */
     @objc
     public func initialize() {
@@ -72,7 +72,7 @@ public class OscletonSDK: NSObject {
      If `applicationDidBecomeActive()` is called in the app delegate,
      this method will be automatically called when the app goes to foreground.
      
-     Since: 0.1
+     - Since: 0.1
      */
     @objc
     public func connect() {
@@ -85,7 +85,7 @@ public class OscletonSDK: NSObject {
      If `applicationWillResignActive()` is called in the app delegate,
      this method will be automatically called when the app goes to background.
      
-     Since: 0.1
+     - Since: 0.1
      */
     @objc
     public func disconnect() {
@@ -98,7 +98,7 @@ public class OscletonSDK: NSObject {
      If `applicationDidBecomeActive()` is called in the app delegate,
      this method will be automatically called when the app goes to foreground.
      
-     Since: 0.1
+     - Since: 0.1
      */
     @objc
     public func startListening() {
@@ -111,7 +111,7 @@ public class OscletonSDK: NSObject {
      If `applicationWillResignActive()` is called in the app delegate,
      this method will be automatically called when the app goes to background.
      
-     Since: 0.1
+     - Since: 0.1
      */
     @objc
     public func stopListening() {
@@ -126,7 +126,7 @@ public class OscletonSDK: NSObject {
      
      Internally, it directly calls `connect()` and `startListening()` methods.
      
-     Since: 0.1
+     - Since: 0.1
      */
     @objc
     public func applicationDidBecomeActive() {
@@ -140,7 +140,7 @@ public class OscletonSDK: NSObject {
      
      Internally, it directly calls `disconnect()` and `stopListening()` methods.
      
-     Since: 0.1
+     - Since: 0.1
      */
     @objc
     public func applicationWillResignActive() {
