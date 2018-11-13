@@ -7,9 +7,17 @@
 
 import Foundation
 
+/**
+ Data class representing a Live device indices info.
+ 
+ - Since: 0.1
+ */
 struct OSDeviceIndices : Hashable {
     
+    /// The track position in the Live set
     var trackIndex: Int
+    
+    /// The device position in the track
     var deviceIndex: Int
     
     init(trackIndex: Int,
