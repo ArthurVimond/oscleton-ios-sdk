@@ -12,6 +12,12 @@ import RxSwift
 
 class LiveSetDataManager {
     
+    var liveVersion: Observable<String> {
+        return messageManager.oscMessage
+            .filter { $0.address.string == LiveAPI.liveVersion }
+            .map { $0.arguments.first!!.string() }
+    }
+    
     var tempo: Observable<Float> {
         return messageManager.oscMessage
             .filter { $0.address.string == LiveAPI.tempo }

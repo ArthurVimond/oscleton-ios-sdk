@@ -14,6 +14,7 @@ struct LiveAPI {
     private static let live = "/live/"
     
     // Config
+    static let liveVersion = live + "config/live_version"
     static let setPeer = live + "set_peer"
     
     // Transport
