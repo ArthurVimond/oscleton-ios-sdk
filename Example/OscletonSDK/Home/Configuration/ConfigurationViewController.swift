@@ -16,6 +16,7 @@ class ConfigurationViewController : UIViewController, UITextFieldDelegate {
     // UI
     @IBOutlet weak var ipAddressTextField: UITextField!
     @IBOutlet weak var setIPAddressButton: UIButton!
+    @IBOutlet weak var liveVersionValueLabel: UILabel!
     
     private let viewModel = ConfigurationViewModel()
     
@@ -24,10 +25,15 @@ class ConfigurationViewController : UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         ipAddressTextField.delegate = self
-        observeProperties()
+        clearDesignTimeTexts()
+        bindProperties()
     }
     
-    private func observeProperties() {
+    private func clearDesignTimeTexts() {
+        liveVersionValueLabel.text = ""
+    }
+    
+    private func bindProperties() {
         
         // IP address
         setIPAddressButton.rx.tap
@@ -35,6 +41,11 @@ class ConfigurationViewController : UIViewController, UITextFieldDelegate {
             .filter { $0 != nil }
             .map { $0! }
             .bind(to: viewModel.ipAddress)
+            .disposed(by: bag)
+        
+        // Live version
+        viewModel.liveVersion
+            .bind(to: liveVersionValueLabel.rx.text)
             .disposed(by: bag)
         
     }

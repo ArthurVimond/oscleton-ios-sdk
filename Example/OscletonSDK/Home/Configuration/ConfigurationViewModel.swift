@@ -14,6 +14,10 @@ class ConfigurationViewModel {
     
     let ipAddress: BehaviorSubject<String> = BehaviorSubject(value: "")
     
+    var liveVersion: Observable<String> {
+        return OscletonSDK.instance.configuration.liveVersion
+    }
+    
     private let bag = DisposeBag()
     
     init() {
