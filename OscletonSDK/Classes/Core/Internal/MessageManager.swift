@@ -50,7 +50,7 @@ class MessageManager {
     private func requestCurrentState() {
         print("requestCurrentState")
     
-//        sendMessage(LiveAPI.liveVersion)
+        sendMessage(LiveAPI.liveVersion)
 //        sendMessage(LiveAPI.scriptVersion)
 //
         sendMessage(LiveAPI.tempo)
