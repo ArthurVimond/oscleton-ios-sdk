@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import RxSwift
 
 /**
  OSConfiguration is responsible for the SDK settings,
@@ -16,6 +17,14 @@ import Foundation
  - Since: 0.1
  */
 public class OSConfiguration: NSObject {
+    
+    // Public properties
+    
+    public var liveVersion: Observable<String> {
+        get { return liveSetDataManager.liveVersion }
+    }
+    
+    // Private properties
     
     private let liveSetDataManager: LiveSetDataManager
     private let messageManager: MessageManager
