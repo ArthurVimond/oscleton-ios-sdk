@@ -13,9 +13,7 @@ import RxSwift
 class LiveSetDataManager {
     
     var liveVersion: Observable<String> {
-        return messageManager.oscMessage
-            .filter { $0.address.string == LiveAPI.liveVersion }
-            .map { $0.arguments.first!!.string() }
+        return _liveVersion
     }
     
     var tempo: Observable<Float> {
@@ -41,10 +39,27 @@ class LiveSetDataManager {
     private let currentDeviceParameterIndices: PublishSubject<OSDeviceParameterIndices> = PublishSubject()
     private let _deviceParameter: PublishSubject<OSDeviceParameter> = PublishSubject()
     
+    // Config
+    private let _liveVersion: BehaviorSubject<String> = BehaviorSubject(value: "")
+    
     init(messageManager: MessageManager) {
         self.messageManager = messageManager
         
+        observeConfigProperties()
         observeDeviceParameterProperties()
+    }
+    
+    private func observeConfigProperties() {
+        
+        // Live version
+        messageManager.oscMessage
+            .filter { $0.address.string == LiveAPI.liveVersion }
+            .map { $0.arguments.first!!.string() }
+            .subscribe(onNext: { [unowned self] liveVersion in
+                self._liveVersion.onNext(liveVersion)
+            })
+            .disposed(by: disposeBag)
+        
     }
     
     private func observeDeviceParameterProperties() {
