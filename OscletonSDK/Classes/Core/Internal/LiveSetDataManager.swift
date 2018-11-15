@@ -17,9 +17,7 @@ class LiveSetDataManager {
     }
     
     var tempo: Observable<Float> {
-        return messageManager.oscMessage
-            .filter { $0.address.string == LiveAPI.tempo }
-            .map { $0.arguments.first!!.float() }
+        return _tempo
     }
     
     var deviceParameter: Observable<OSDeviceParameter> {
@@ -42,10 +40,14 @@ class LiveSetDataManager {
     // Config
     private let _liveVersion: BehaviorSubject<String> = BehaviorSubject(value: "")
     
+    // Transport
+    private let _tempo: BehaviorSubject<Float> = BehaviorSubject(value: 120)
+    
     init(messageManager: MessageManager) {
         self.messageManager = messageManager
         
         observeConfigProperties()
+        observeTransportProperties()
         observeDeviceParameterProperties()
     }
     
@@ -57,6 +59,19 @@ class LiveSetDataManager {
             .map { $0.arguments.first!!.string() }
             .subscribe(onNext: { [unowned self] liveVersion in
                 self._liveVersion.onNext(liveVersion)
+            })
+            .disposed(by: disposeBag)
+        
+    }
+    
+    private func observeTransportProperties() {
+        
+        // Tempo
+        messageManager.oscMessage
+            .filter { $0.address.string == LiveAPI.tempo }
+            .map { $0.arguments.first!!.float() }
+            .subscribe(onNext: { [unowned self] tempo in
+                self._tempo.onNext(tempo)
             })
             .disposed(by: disposeBag)
         
