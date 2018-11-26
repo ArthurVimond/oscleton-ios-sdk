@@ -22,6 +22,10 @@ class ConfigurationViewModel {
         return OscletonSDK.instance.configuration.scriptVersion
     }
     
+    var sdkVersion: String {
+        return OscletonSDK.instance.configuration.sdkVersion
+    }
+    
     private let bag = DisposeBag()
     
     init() {
