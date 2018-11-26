@@ -21,6 +21,18 @@ public class OSConfiguration: NSObject {
     // Public properties
     
     /**
+     Oscleton SDK version
+     
+     - Returns: the Oscleton SDK version
+     - Since: 0.1
+     */
+    public var sdkVersion: String {
+        get {
+            let bundle = Bundle(identifier: "org.cocoapods.OscletonSDK")!
+            return bundle.infoDictionary!["CFBundleShortVersionString"] as! String }
+    }
+    
+    /**
      Live software version
      
      - Returns: the Live software version
