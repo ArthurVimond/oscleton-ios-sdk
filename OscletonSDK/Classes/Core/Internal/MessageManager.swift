@@ -51,8 +51,8 @@ class MessageManager {
         print("requestCurrentState")
     
         sendMessage(LiveAPI.liveVersion)
-//        sendMessage(LiveAPI.scriptVersion)
-//
+        sendMessage(LiveAPI.scriptVersion)
+
         sendMessage(LiveAPI.tempo)
 //
 //        sendMessage(LiveAPI.masterVolume)
