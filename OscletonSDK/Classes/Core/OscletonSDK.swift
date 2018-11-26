@@ -31,7 +31,7 @@ public class OscletonSDK: NSObject {
     
     /// OSConfiguration is responsible for the settings needed to establish the connection.
     @objc
-    public private(set) var configuration: OSConfiguration
+    public private(set) var config: OSConfiguration
     
     /// OSController lets you control a Live set from your iOS device.
     @objc
@@ -47,7 +47,7 @@ public class OscletonSDK: NSObject {
     
     private override init() {
         print("OscletonSDK::init")
-        configuration = dependencyProvider.provideConfiguration()
+        config = dependencyProvider.provideConfiguration()
         controller = dependencyProvider.provideController()
         receiver = dependencyProvider.provideReceiver()
         messageManager = dependencyProvider.provideMessageManager()
