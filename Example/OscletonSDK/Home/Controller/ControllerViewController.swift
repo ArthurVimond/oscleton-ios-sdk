@@ -18,6 +18,7 @@ class ControllerViewController : UIViewController {
     @IBOutlet weak var playButton: UIButton!
     @IBOutlet weak var stopButton: UIButton!
     @IBOutlet weak var undoButton: UIButton!
+    @IBOutlet weak var redoButton: UIButton!
     
     private let viewModel = ControllerViewModel()
     
@@ -39,6 +40,11 @@ class ControllerViewController : UIViewController {
         // Undo
         undoButton.rx.tap
             .bind { self.viewModel.undo() }
+            .disposed(by: bag)
+        
+        // Redo
+        redoButton.rx.tap
+            .bind { self.viewModel.redo() }
             .disposed(by: bag)
         
     }

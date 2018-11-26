@@ -23,4 +23,8 @@ class ControllerViewModel {
         OscletonSDK.instance.controller.undo()
     }
     
+    func redo() {
+        OscletonSDK.instance.controller.redo()
+    }
+    
 }
