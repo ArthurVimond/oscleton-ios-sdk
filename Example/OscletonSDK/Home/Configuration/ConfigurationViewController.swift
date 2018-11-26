@@ -17,6 +17,7 @@ class ConfigurationViewController : UIViewController, UITextFieldDelegate {
     @IBOutlet weak var ipAddressTextField: UITextField!
     @IBOutlet weak var setIPAddressButton: UIButton!
     @IBOutlet weak var liveVersionValueLabel: UILabel!
+    @IBOutlet weak var scriptVersionValueLabel: UILabel!
     
     private let viewModel = ConfigurationViewModel()
     
@@ -46,6 +47,11 @@ class ConfigurationViewController : UIViewController, UITextFieldDelegate {
         // Live version
         viewModel.liveVersion
             .bind(to: liveVersionValueLabel.rx.text)
+            .disposed(by: bag)
+        
+        // Script version
+        viewModel.scriptVersion
+            .bind(to: scriptVersionValueLabel.rx.text)
             .disposed(by: bag)
         
     }

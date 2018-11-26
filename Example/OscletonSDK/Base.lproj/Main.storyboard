@@ -277,16 +277,31 @@
                                 </state>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ableton Live version: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cF3-4c-ef6" userLabel="LiveVersion Title Label">
-                                <rect key="frame" x="16" y="91" width="170" height="21"/>
+                                <rect key="frame" x="16" y="91" width="220" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="170" id="gaS-cC-WYQ"/>
+                                    <constraint firstAttribute="width" constant="220" id="gaS-cC-WYQ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10.0.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kvV-rO-zfF" userLabel="LiveVersion Value Label">
-                                <rect key="frame" x="194" y="91" width="45.5" height="21"/>
+                                <rect key="frame" x="244" y="91" width="45.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MIDI Remote Script version:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l3a-9w-5JJ" userLabel="ScriptVersion Title Label">
+                                <rect key="frame" x="16" y="128" width="220" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="220" id="kPO-HT-zY0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.1.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cvB-0N-Vma" userLabel="ScriptVersion Value Label">
+                                <rect key="frame" x="244" y="128" width="36" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -298,12 +313,16 @@
                             <constraint firstAttribute="trailing" secondItem="pCF-E1-VgJ" secondAttribute="trailing" constant="8" id="F7h-eI-hvc"/>
                             <constraint firstItem="kvV-rO-zfF" firstAttribute="centerY" secondItem="cF3-4c-ef6" secondAttribute="centerY" id="FZY-wM-Ole"/>
                             <constraint firstItem="mKB-Af-BBS" firstAttribute="leading" secondItem="bQC-cs-Wea" secondAttribute="leading" constant="16" id="G6v-qL-1aM"/>
+                            <constraint firstItem="cvB-0N-Vma" firstAttribute="centerY" secondItem="l3a-9w-5JJ" secondAttribute="centerY" id="GIU-qJ-MuU"/>
                             <constraint firstItem="jU3-tW-40J" firstAttribute="trailing" secondItem="pCF-E1-VgJ" secondAttribute="leading" constant="8" id="Ghr-rR-d6s"/>
                             <constraint firstItem="cF3-4c-ef6" firstAttribute="leading" secondItem="mKB-Af-BBS" secondAttribute="leading" id="J2E-6H-jfS"/>
                             <constraint firstItem="jU3-tW-40J" firstAttribute="leading" secondItem="bQC-cs-Wea" secondAttribute="leading" constant="16" id="W1o-7h-sn4"/>
                             <constraint firstItem="mKB-Af-BBS" firstAttribute="top" secondItem="jU3-tW-40J" secondAttribute="bottom" constant="8" id="Xh7-U1-XOa"/>
                             <constraint firstItem="jU3-tW-40J" firstAttribute="top" secondItem="WGc-cP-0tr" secondAttribute="bottom" constant="16" id="ZbN-gS-5IU"/>
+                            <constraint firstItem="l3a-9w-5JJ" firstAttribute="leading" secondItem="cF3-4c-ef6" secondAttribute="leading" id="bnP-Bi-dwX"/>
                             <constraint firstItem="kvV-rO-zfF" firstAttribute="leading" secondItem="cF3-4c-ef6" secondAttribute="trailing" constant="8" id="i1Y-0a-xWM"/>
+                            <constraint firstItem="cvB-0N-Vma" firstAttribute="leading" secondItem="l3a-9w-5JJ" secondAttribute="trailing" constant="8" id="s59-cG-A9b"/>
+                            <constraint firstItem="l3a-9w-5JJ" firstAttribute="top" secondItem="cF3-4c-ef6" secondAttribute="bottom" constant="16" id="uBV-By-WSq"/>
                             <constraint firstItem="pCF-E1-VgJ" firstAttribute="top" secondItem="jU3-tW-40J" secondAttribute="bottom" constant="8" id="v7E-6L-PiL"/>
                             <constraint firstItem="pCF-E1-VgJ" firstAttribute="leading" secondItem="mKB-Af-BBS" secondAttribute="trailing" constant="8" id="wcL-eV-JlP"/>
                         </constraints>
@@ -312,6 +331,7 @@
                     <connections>
                         <outlet property="ipAddressTextField" destination="mKB-Af-BBS" id="upd-XS-G4v"/>
                         <outlet property="liveVersionValueLabel" destination="kvV-rO-zfF" id="CxZ-NL-cC0"/>
+                        <outlet property="scriptVersionValueLabel" destination="cvB-0N-Vma" id="Hhe-Lo-qJ3"/>
                         <outlet property="setIPAddressButton" destination="pCF-E1-VgJ" id="qNn-uZ-r1y"/>
                     </connections>
                 </viewController>

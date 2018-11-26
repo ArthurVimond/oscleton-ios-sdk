@@ -18,6 +18,10 @@ class ConfigurationViewModel {
         return OscletonSDK.instance.configuration.liveVersion
     }
     
+    var scriptVersion: Observable<String> {
+        return OscletonSDK.instance.configuration.scriptVersion
+    }
+    
     private let bag = DisposeBag()
     
     init() {
