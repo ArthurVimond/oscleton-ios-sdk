@@ -426,6 +426,29 @@
                                     <constraint firstItem="enH-3U-Xn9" firstAttribute="top" secondItem="hzB-tr-aU2" secondAttribute="top" id="nxN-lV-XIS"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5ae-pe-biZ" userLabel="Overdub Container View">
+                                <rect key="frame" x="227.5" y="108" width="131.5" height="26"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Overdub" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fa5-4K-oJQ" userLabel="Overdub Title Label">
+                                        <rect key="frame" x="8" y="0.0" width="66.5" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="P8w-8v-ZUT" userLabel="Overdub Switch">
+                                        <rect key="frame" x="82.5" y="-5" width="51" height="31"/>
+                                        <color key="onTintColor" red="0.2470588235" green="0.31764705879999999" blue="0.70980392160000005" alpha="1" colorSpace="calibratedRGB"/>
+                                    </switch>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="P8w-8v-ZUT" secondAttribute="bottom" id="74a-CH-H9i"/>
+                                    <constraint firstItem="P8w-8v-ZUT" firstAttribute="centerY" secondItem="fa5-4K-oJQ" secondAttribute="centerY" id="ZMN-mH-PXu"/>
+                                    <constraint firstItem="fa5-4K-oJQ" firstAttribute="leading" secondItem="5ae-pe-biZ" secondAttribute="leading" constant="8" id="Zdw-rA-UUR"/>
+                                    <constraint firstItem="fa5-4K-oJQ" firstAttribute="top" secondItem="5ae-pe-biZ" secondAttribute="top" id="dgA-Br-FH6"/>
+                                    <constraint firstItem="P8w-8v-ZUT" firstAttribute="leading" secondItem="fa5-4K-oJQ" secondAttribute="trailing" constant="8" id="qAG-wM-cfy"/>
+                                    <constraint firstAttribute="trailing" secondItem="P8w-8v-ZUT" secondAttribute="trailing" id="z9n-Ad-UTo"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -436,7 +459,9 @@
                             <constraint firstItem="YLF-ai-NeJ" firstAttribute="top" secondItem="R5S-6q-6k7" secondAttribute="bottom" constant="16" id="bD7-Ef-iYA"/>
                             <constraint firstItem="Bcl-e9-iRr" firstAttribute="top" secondItem="UXt-2A-pu9" secondAttribute="bottom" constant="16" id="g9D-Gm-rqC"/>
                             <constraint firstItem="hzB-tr-aU2" firstAttribute="leading" secondItem="YLF-ai-NeJ" secondAttribute="leading" id="jfk-jI-bGL"/>
+                            <constraint firstItem="5ae-pe-biZ" firstAttribute="centerY" secondItem="hzB-tr-aU2" secondAttribute="centerY" id="lTe-Ff-r41"/>
                             <constraint firstItem="hzB-tr-aU2" firstAttribute="top" secondItem="YLF-ai-NeJ" secondAttribute="bottom" constant="16" id="oGk-ny-Vef"/>
+                            <constraint firstItem="5ae-pe-biZ" firstAttribute="trailing" secondItem="yHY-gK-HHy" secondAttribute="trailing" id="sL5-Qm-L86"/>
                             <constraint firstItem="yHY-gK-HHy" firstAttribute="centerY" secondItem="YLF-ai-NeJ" secondAttribute="centerY" id="t4t-w4-AwQ"/>
                             <constraint firstItem="Bcl-e9-iRr" firstAttribute="trailing" secondItem="bUW-Un-dyB" secondAttribute="trailing" constant="-16" id="tfI-ZV-bkU"/>
                         </constraints>
@@ -444,6 +469,7 @@
                     <navigationItem key="navigationItem" title="Controller" id="jN9-N8-nga"/>
                     <connections>
                         <outlet property="metronomeSwitch" destination="hoi-Fa-dla" id="E4h-fm-71E"/>
+                        <outlet property="overdubSwitch" destination="P8w-8v-ZUT" id="nxf-Wx-lXs"/>
                         <outlet property="playButton" destination="R5S-6q-6k7" id="lFU-8r-EbO"/>
                         <outlet property="redoButton" destination="yHY-gK-HHy" id="Usf-9k-isY"/>
                         <outlet property="stopButton" destination="Bcl-e9-iRr" id="flI-a8-20k"/>

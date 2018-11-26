@@ -20,6 +20,7 @@ class ControllerViewController : UIViewController {
     @IBOutlet weak var undoButton: UIButton!
     @IBOutlet weak var redoButton: UIButton!
     @IBOutlet weak var metronomeSwitch: UISwitch!
+    @IBOutlet weak var overdubSwitch: UISwitch!
     
     private let viewModel = ControllerViewModel()
     
@@ -53,6 +54,14 @@ class ControllerViewController : UIViewController {
             .subscribe(onNext: { [unowned self] _ in
                 let isOn = self.metronomeSwitch.isOn
                 self.viewModel.setMetronome(enabled: isOn)
+            })
+            .disposed(by: bag)
+        
+        // Overdub
+        overdubSwitch.rx.controlEvent(UIControlEvents.valueChanged)
+            .subscribe(onNext: { [unowned self] _ in
+                let isOn = self.overdubSwitch.isOn
+                self.viewModel.setOverdub(enabled: isOn)
             })
             .disposed(by: bag)
         

@@ -31,4 +31,8 @@ class ControllerViewModel {
         OscletonSDK.instance.controller.setMetronome(enabled: enabled)
     }
     
+    func setOverdub(enabled: Bool) {
+        OscletonSDK.instance.controller.setOverdub(enabled: enabled)
+    }
+    
 }
