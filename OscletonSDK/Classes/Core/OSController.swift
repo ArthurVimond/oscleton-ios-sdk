@@ -51,4 +51,14 @@ public class OSController: NSObject {
         messageManager.sendMessage(LiveAPI.undo)
     }
     
+    /**
+     Redo the next action.
+     
+     - Since: 0.1
+     */
+    @objc
+    public func redo() {
+        messageManager.sendMessage(LiveAPI.redo)
+    }
+    
 }

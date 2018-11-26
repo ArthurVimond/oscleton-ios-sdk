@@ -26,6 +26,7 @@ struct LiveAPI {
     static let stop = live + "stop"
     
     static let undo = live + "undo"
+    static let redo = live + "redo"
     
     // Devices
     
