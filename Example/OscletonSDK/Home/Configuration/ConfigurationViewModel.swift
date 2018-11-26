@@ -15,15 +15,15 @@ class ConfigurationViewModel {
     let ipAddress: BehaviorSubject<String> = BehaviorSubject(value: "")
     
     var liveVersion: Observable<String> {
-        return OscletonSDK.instance.configuration.liveVersion
+        return OscletonSDK.instance.config.liveVersion
     }
     
     var scriptVersion: Observable<String> {
-        return OscletonSDK.instance.configuration.scriptVersion
+        return OscletonSDK.instance.config.scriptVersion
     }
     
     var sdkVersion: String {
-        return OscletonSDK.instance.configuration.sdkVersion
+        return OscletonSDK.instance.config.sdkVersion
     }
     
     private let bag = DisposeBag()
@@ -38,7 +38,7 @@ class ConfigurationViewModel {
         ipAddress
             .filter { !$0.isEmpty }
             .subscribe(onNext: { ip in
-                let result = OscletonSDK.instance.configuration.setComputerIP(ip: ip)
+                let result = OscletonSDK.instance.config.setComputerIP(ip: ip)
                 if result == .error {
                     print("Unable to setComputerIP()")
                 }
