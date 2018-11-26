@@ -16,6 +16,10 @@ class LiveSetDataManager {
         return _liveVersion
     }
     
+    var scriptVersion: Observable<String> {
+        return _scriptVersion
+    }
+    
     var tempo: Observable<Float> {
         return _tempo
     }
@@ -39,6 +43,7 @@ class LiveSetDataManager {
     
     // Config
     private let _liveVersion: BehaviorSubject<String> = BehaviorSubject(value: "")
+    private let _scriptVersion: BehaviorSubject<String> = BehaviorSubject(value: "")
     
     // Transport
     private let _tempo: BehaviorSubject<Float> = BehaviorSubject(value: 120)
@@ -59,6 +64,15 @@ class LiveSetDataManager {
             .map { $0.arguments.first!!.string() }
             .subscribe(onNext: { [unowned self] liveVersion in
                 self._liveVersion.onNext(liveVersion)
+            })
+            .disposed(by: disposeBag)
+        
+        // Script version
+        messageManager.oscMessage
+            .filter { $0.address.string == LiveAPI.scriptVersion }
+            .map { $0.arguments.first!!.string() }
+            .subscribe(onNext: { [unowned self] scriptVersion in
+                self._scriptVersion.onNext(scriptVersion)
             })
             .disposed(by: disposeBag)
         
