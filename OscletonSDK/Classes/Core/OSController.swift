@@ -72,4 +72,15 @@ public class OSController: NSObject {
         messageManager.sendMessage(LiveAPI.tempo, [tempo])
     }
     
+    /**
+     Set the Live set metronome state.
+     
+     - Parameter enabled: the metronome state to set
+     - Since: 0.1
+     */
+    @objc
+    public func setMetronome(enabled: Bool) {
+        messageManager.sendMessage(LiveAPI.metronome, [enabled.int()])
+    }
+    
 }

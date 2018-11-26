@@ -28,6 +28,8 @@ struct LiveAPI {
     static let undo = live + "undo"
     static let redo = live + "redo"
     
+    static let metronome = live + "metronome"
+    
     // Devices
     
     static let trackDeviceParam = live + "track/device/param"
