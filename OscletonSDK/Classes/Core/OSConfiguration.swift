@@ -20,6 +20,12 @@ public class OSConfiguration: NSObject {
     
     // Public properties
     
+    /**
+     Live software version
+     
+     - Returns: the Live software version
+     - Since: 0.1
+     */
     public var liveVersion: Observable<String> {
         get { return liveSetDataManager.liveVersion }
     }
@@ -51,6 +57,7 @@ public class OSConfiguration: NSObject {
      
      - Parameter ip: the IP address of the computer running Ableton Live
      - Returns: the SDK result
+     - Since: 0.1
      */
     @objc(setComputerIP:)
     public func setComputerIP(ip: String) -> OSResult {
