@@ -19,6 +19,7 @@ class ControllerViewController : UIViewController {
     @IBOutlet weak var stopButton: UIButton!
     @IBOutlet weak var undoButton: UIButton!
     @IBOutlet weak var redoButton: UIButton!
+    @IBOutlet weak var metronomeSwitch: UISwitch!
     
     private let viewModel = ControllerViewModel()
     
@@ -45,6 +46,14 @@ class ControllerViewController : UIViewController {
         // Redo
         redoButton.rx.tap
             .bind { self.viewModel.redo() }
+            .disposed(by: bag)
+        
+        // Metronome
+        metronomeSwitch.rx.controlEvent(UIControlEvents.valueChanged)
+            .subscribe(onNext: { [unowned self] _ in
+                let isOn = self.metronomeSwitch.isOn
+                self.viewModel.setMetronome(enabled: isOn)
+            })
             .disposed(by: bag)
         
     }

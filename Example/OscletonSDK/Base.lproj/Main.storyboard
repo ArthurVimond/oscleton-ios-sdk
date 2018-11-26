@@ -403,6 +403,29 @@
                                 <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Redo"/>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hzB-tr-aU2" userLabel="Metronome Container View">
+                                <rect key="frame" x="16" y="108" width="153" height="26"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Metronome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="enH-3U-Xn9" userLabel="Metronome Title Label">
+                                        <rect key="frame" x="8" y="0.0" width="88" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="hoi-Fa-dla" userLabel="Metronome Switch">
+                                        <rect key="frame" x="104" y="-5" width="51" height="31"/>
+                                        <color key="onTintColor" red="0.2470588235" green="0.31764705879999999" blue="0.70980392160000005" alpha="1" colorSpace="calibratedRGB"/>
+                                    </switch>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="hoi-Fa-dla" secondAttribute="trailing" id="38Q-1O-DAc"/>
+                                    <constraint firstItem="hoi-Fa-dla" firstAttribute="centerY" secondItem="enH-3U-Xn9" secondAttribute="centerY" id="9qd-fS-o2a"/>
+                                    <constraint firstItem="hoi-Fa-dla" firstAttribute="leading" secondItem="enH-3U-Xn9" secondAttribute="trailing" constant="8" id="S7j-Is-F7g"/>
+                                    <constraint firstItem="enH-3U-Xn9" firstAttribute="leading" secondItem="hzB-tr-aU2" secondAttribute="leading" constant="8" id="Ztm-Yl-Gz6"/>
+                                    <constraint firstAttribute="bottom" secondItem="hoi-Fa-dla" secondAttribute="bottom" id="dOL-AG-SQX"/>
+                                    <constraint firstItem="enH-3U-Xn9" firstAttribute="top" secondItem="hzB-tr-aU2" secondAttribute="top" id="nxN-lV-XIS"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -412,12 +435,15 @@
                             <constraint firstItem="R5S-6q-6k7" firstAttribute="leading" secondItem="bUW-Un-dyB" secondAttribute="leading" constant="16" id="Ykw-U5-OcA"/>
                             <constraint firstItem="YLF-ai-NeJ" firstAttribute="top" secondItem="R5S-6q-6k7" secondAttribute="bottom" constant="16" id="bD7-Ef-iYA"/>
                             <constraint firstItem="Bcl-e9-iRr" firstAttribute="top" secondItem="UXt-2A-pu9" secondAttribute="bottom" constant="16" id="g9D-Gm-rqC"/>
+                            <constraint firstItem="hzB-tr-aU2" firstAttribute="leading" secondItem="YLF-ai-NeJ" secondAttribute="leading" id="jfk-jI-bGL"/>
+                            <constraint firstItem="hzB-tr-aU2" firstAttribute="top" secondItem="YLF-ai-NeJ" secondAttribute="bottom" constant="16" id="oGk-ny-Vef"/>
                             <constraint firstItem="yHY-gK-HHy" firstAttribute="centerY" secondItem="YLF-ai-NeJ" secondAttribute="centerY" id="t4t-w4-AwQ"/>
                             <constraint firstItem="Bcl-e9-iRr" firstAttribute="trailing" secondItem="bUW-Un-dyB" secondAttribute="trailing" constant="-16" id="tfI-ZV-bkU"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Controller" id="jN9-N8-nga"/>
                     <connections>
+                        <outlet property="metronomeSwitch" destination="hoi-Fa-dla" id="E4h-fm-71E"/>
                         <outlet property="playButton" destination="R5S-6q-6k7" id="lFU-8r-EbO"/>
                         <outlet property="redoButton" destination="yHY-gK-HHy" id="Usf-9k-isY"/>
                         <outlet property="stopButton" destination="Bcl-e9-iRr" id="flI-a8-20k"/>

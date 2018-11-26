@@ -27,4 +27,8 @@ class ControllerViewModel {
         OscletonSDK.instance.controller.redo()
     }
     
+    func setMetronome(enabled: Bool) {
+        OscletonSDK.instance.controller.setMetronome(enabled: enabled)
+    }
+    
 }
