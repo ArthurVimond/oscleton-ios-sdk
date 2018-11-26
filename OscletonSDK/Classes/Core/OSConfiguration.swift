@@ -24,6 +24,16 @@ public class OSConfiguration: NSObject {
         get { return liveSetDataManager.liveVersion }
     }
     
+    /**
+     Oscleton MIDI Remote Script version in Live
+     
+     - Returns: the Oscleton MIDI Remote Script version
+     - Since: 0.1
+     */
+    public var scriptVersion: Observable<String> {
+        get { return liveSetDataManager.scriptVersion }
+    }
+    
     // Private properties
     
     private let liveSetDataManager: LiveSetDataManager
