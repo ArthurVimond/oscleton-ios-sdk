@@ -61,4 +61,15 @@ public class OSController: NSObject {
         messageManager.sendMessage(LiveAPI.redo)
     }
     
+    /**
+     Set the Live set general tempo.
+     
+     - Parameter tempo: the Live set general tempo to set
+     - Since: 0.1
+     */
+    @objc
+    public func setTempo(tempo: Float) {
+        messageManager.sendMessage(LiveAPI.tempo, [tempo])
+    }
+    
 }
