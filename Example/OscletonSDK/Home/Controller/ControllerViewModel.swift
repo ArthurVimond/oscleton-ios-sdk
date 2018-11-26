@@ -19,4 +19,8 @@ class ControllerViewModel {
         OscletonSDK.instance.controller.stop()
     }
     
+    func undo() {
+        OscletonSDK.instance.controller.undo()
+    }
+    
 }

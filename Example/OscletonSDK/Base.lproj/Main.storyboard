@@ -387,11 +387,21 @@
                                 <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Stop"/>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YLF-ai-NeJ" userLabel="Undo Button">
+                                <rect key="frame" x="16" y="62" width="50" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="YR6-OG-Au7"/>
+                                </constraints>
+                                <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Undo"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="YLF-ai-NeJ" firstAttribute="leading" secondItem="R5S-6q-6k7" secondAttribute="leading" id="2qo-rc-tX0"/>
                             <constraint firstItem="R5S-6q-6k7" firstAttribute="top" secondItem="UXt-2A-pu9" secondAttribute="bottom" constant="16" id="W7O-aI-gJy"/>
                             <constraint firstItem="R5S-6q-6k7" firstAttribute="leading" secondItem="bUW-Un-dyB" secondAttribute="leading" constant="16" id="Ykw-U5-OcA"/>
+                            <constraint firstItem="YLF-ai-NeJ" firstAttribute="top" secondItem="R5S-6q-6k7" secondAttribute="bottom" constant="16" id="bD7-Ef-iYA"/>
                             <constraint firstItem="Bcl-e9-iRr" firstAttribute="top" secondItem="UXt-2A-pu9" secondAttribute="bottom" constant="16" id="g9D-Gm-rqC"/>
                             <constraint firstItem="Bcl-e9-iRr" firstAttribute="trailing" secondItem="bUW-Un-dyB" secondAttribute="trailing" constant="-16" id="tfI-ZV-bkU"/>
                         </constraints>
@@ -400,6 +410,7 @@
                     <connections>
                         <outlet property="playButton" destination="R5S-6q-6k7" id="lFU-8r-EbO"/>
                         <outlet property="stopButton" destination="Bcl-e9-iRr" id="flI-a8-20k"/>
+                        <outlet property="undoButton" destination="YLF-ai-NeJ" id="Gz8-Vh-ENb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0By-gV-5fJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
