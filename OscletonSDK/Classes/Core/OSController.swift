@@ -41,4 +41,14 @@ public class OSController: NSObject {
         messageManager.sendMessage(LiveAPI.stop)
     }
     
+    /**
+     Undo the previous action.
+     
+     - Since: 0.1
+     */
+    @objc
+    public func undo() {
+        messageManager.sendMessage(LiveAPI.undo)
+    }
+    
 }
