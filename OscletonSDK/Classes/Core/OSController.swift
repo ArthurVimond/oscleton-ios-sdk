@@ -83,4 +83,15 @@ public class OSController: NSObject {
         messageManager.sendMessage(LiveAPI.metronome, [enabled.int()])
     }
     
+    /**
+     Set the Live set overdub state.
+     
+     - Parameter enabled: the overdub state to set
+     - Since: 0.1
+     */
+    @objc
+    public func setOverdub(enabled: Bool) {
+        messageManager.sendMessage(LiveAPI.overdub, [enabled.int()])
+    }
+    
 }

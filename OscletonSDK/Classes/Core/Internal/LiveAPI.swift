@@ -29,6 +29,7 @@ struct LiveAPI {
     static let redo = live + "redo"
     
     static let metronome = live + "metronome"
+    static let overdub = live + "overdub"
     
     // Devices
     
