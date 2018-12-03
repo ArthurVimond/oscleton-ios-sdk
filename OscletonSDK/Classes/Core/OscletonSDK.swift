@@ -69,7 +69,7 @@ public class OscletonSDK: NSObject {
     /**
      Connect the device and prepare to listen for incoming changes.
      
-     If `applicationDidBecomeActive()` is called in the app delegate,
+     If `applicationDidBecomeActive:` is called in the app delegate,
      this method will be automatically called when the app goes to foreground.
      
      - Since: 0.1
@@ -82,7 +82,7 @@ public class OscletonSDK: NSObject {
     /**
      Disconnect the device and close the incoming changes listener.
      
-     If `applicationWillResignActive()` is called in the app delegate,
+     If `applicationWillResignActive:` is called in the app delegate,
      this method will be automatically called when the app goes to background.
      
      - Since: 0.1
@@ -95,7 +95,7 @@ public class OscletonSDK: NSObject {
     /**
      Start listening for incoming changes.
      
-     If `applicationDidBecomeActive()` is called in the app delegate,
+     If `applicationDidBecomeActive:` is called in the app delegate,
      this method will be automatically called when the app goes to foreground.
      
      - Since: 0.1
@@ -108,7 +108,7 @@ public class OscletonSDK: NSObject {
     /**
      Stop listening for incoming changes.
      
-     If `applicationWillResignActive()` is called in the app delegate,
+     If `applicationWillResignActive:` is called in the app delegate,
      this method will be automatically called when the app goes to background.
      
      - Since: 0.1
@@ -121,10 +121,10 @@ public class OscletonSDK: NSObject {
     // Lifecycle
     
     /**
-     Call this function in the app delegate's `applicationDidBecomeActive()`
+     Call this function in the app delegate's `applicationDidBecomeActive:`
      to automatically handle device connection state.
      
-     Internally, it directly calls `connect()` and `startListening()` methods.
+     Internally, it directly calls `connect:` and `startListening:` methods.
      
      - Since: 0.1
      */
@@ -135,10 +135,10 @@ public class OscletonSDK: NSObject {
     }
     
     /**
-     Call this function in the app delegate's `applicationWillResignActive()`
+     Call this function in the app delegate's `applicationWillResignActive:`
      to automatically handle device connection state.
      
-     Internally, it directly calls `disconnect()` and `stopListening()` methods.
+     Internally, it directly calls `disconnect` and `stopListening` methods.
      
      - Since: 0.1
      */
