@@ -7,21 +7,22 @@
 
 Ableton Live companion SDK for iOS
 
-## Example
+## Official documentation
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+The official documentation is hosted on the [Oscleton SDK website](https://sdk.oscleton.com).
 
 ## Pod Setup
-
-(not available yet)
 
 OscletonSDK is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'OscletonSDK'
+pod 'OscletonSDK', '~> 0.1.0'
 ```
 
+## Example
+
+To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 ## License
 
