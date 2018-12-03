@@ -7,8 +7,19 @@
 
 import Foundation
 
-class NetworkUtils {
+/**
+ NetworkUtils is a utility class regarding device connectivity.
+ 
+ - Since: 0.1
+ */
+public class NetworkUtils: NSObject {
     
+    /**
+     Returns the device IP address.
+     
+     - Returns: the device IP address
+     - Since: 0.1
+     */
     public static func deviceIPAddress() -> String? {
         var address: String?
         var ifaddr: UnsafeMutablePointer<ifaddrs>? = nil
