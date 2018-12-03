@@ -106,7 +106,7 @@ class LiveSetDataManager {
                 }
 
                 // Update track index (if needed)
-                var savedTrack = self.tracks.first { $0.key == deviceParam.trackIndex }!.value
+                let savedTrack = self.tracks.first { $0.key == deviceParam.trackIndex }!.value
                 if (savedTrack.index != deviceParam.trackIndex) {
                     savedTrack.index = deviceParam.trackIndex
                     self.tracks.updateValue(savedTrack, forKey: deviceParam.trackIndex)
@@ -120,7 +120,7 @@ class LiveSetDataManager {
                 }
 
                 // Update device (if needed)
-                var savedDevice = self.devices.first { $0.key == deviceIndices }!.value
+                let savedDevice = self.devices.first { $0.key == deviceIndices }!.value
                 if (savedDevice.trackIndex != deviceParam.trackIndex || savedDevice.deviceIndex != deviceParam.deviceIndex) {
                     savedDevice.trackIndex = deviceParam.trackIndex
                     savedDevice.deviceIndex = deviceParam.deviceIndex
