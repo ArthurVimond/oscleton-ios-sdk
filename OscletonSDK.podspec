@@ -20,7 +20,6 @@ Pod::Spec.new do |s|
   s.description  = "Oscleton SDK provides a complete solution to communicate with Ableton Live on iOS devices."
 
   s.homepage         = 'https://github.com/ArthurVimond/oscleton-ios-sdk'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'Apache License, Version 2.0', :file => 'LICENSE' }
   s.author           = { 'Arthur Vimond' => 'arthurvimond@gmail.com' }
   s.source           = { :git => 'https://github.com/ArthurVimond/oscleton-ios-sdk.git', :tag => s.version.to_s }
@@ -30,12 +29,6 @@ Pod::Spec.new do |s|
 
   s.source_files = 'OscletonSDK/Classes/**/*.{swift,h}'
   
-  # s.resource_bundles = {
-  #   'OscletonSDK' => ['OscletonSDK/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
   s.dependency "Swinject", "~> 2.5.0"
   s.dependency "SwiftOSC", "~> 1.2"
   s.dependency "RxSwift", "~> 4.0"
