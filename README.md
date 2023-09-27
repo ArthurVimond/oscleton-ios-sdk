@@ -20,6 +20,15 @@ it, simply add the following line to your Podfile:
 pod 'OscletonSDK', '~> 0.1.0'
 ```
 
+## API reference generation
+
+The Oscleton SDK API reference is generated with sourcedocs. To generate it, following the following steps:
+
+```
+cd Example/pods
+sourcedocs generate -- -scheme OscletonSDK
+```
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.

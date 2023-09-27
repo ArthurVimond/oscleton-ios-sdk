@@ -20,6 +20,10 @@ class LiveSetDataManager {
         return _scriptVersion
     }
     
+    var onSetPeerSuccess: Observable<Bool> {
+        return _onSetPeerSuccess
+    }
+    
     var tempo: Observable<Float> {
         return _tempo
     }
@@ -44,6 +48,7 @@ class LiveSetDataManager {
     // Config
     private let _liveVersion: BehaviorSubject<String> = BehaviorSubject(value: "")
     private let _scriptVersion: BehaviorSubject<String> = BehaviorSubject(value: "")
+    private let _onSetPeerSuccess: PublishSubject<Bool> = PublishSubject()
     
     // Transport
     private let _tempo: BehaviorSubject<Float> = BehaviorSubject(value: 120)
@@ -73,6 +78,21 @@ class LiveSetDataManager {
             .map { $0.arguments.first!!.string() }
             .subscribe(onNext: { [unowned self] scriptVersion in
                 self._scriptVersion.onNext(scriptVersion)
+            })
+            .disposed(by: disposeBag)
+        
+        // SetPeer success
+        messageManager.oscMessage
+            .filter { $0.address.string == LiveAPI.setPeerSuccess }
+            .subscribe(onNext: { [unowned self] _ in
+                self._onSetPeerSuccess.onNext(true)
+            })
+            .disposed(by: disposeBag)
+        
+        // Test log
+        messageManager.oscMessage
+            .subscribe(onNext: { message in
+                print("oscMessage - message.address: \(message.address)")
             })
             .disposed(by: disposeBag)
         

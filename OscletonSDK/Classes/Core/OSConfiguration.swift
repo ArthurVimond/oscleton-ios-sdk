@@ -18,6 +18,11 @@ import RxSwift
  */
 public class OSConfiguration: NSObject {
     
+    // Private properties
+    
+    private let compositeDisposable = CompositeDisposable()
+    private var connectionSuccesDisp: Disposable?
+    
     // Public properties
     
     /**
@@ -52,6 +57,17 @@ public class OSConfiguration: NSObject {
         get { return liveSetDataManager.scriptVersion }
     }
     
+    /**
+     Connection success message in response of `setComputerIP:` call.
+     
+     @return Connection success message
+     @since 0.2
+     @see setComputerIP
+     */
+    public var onConnectionSuccess: Observable<Bool> {
+        get { return liveSetDataManager.onSetPeerSuccess }
+    }
+    
     // Private properties
     
     private let liveSetDataManager: LiveSetDataManager
@@ -74,6 +90,32 @@ public class OSConfiguration: NSObject {
     @objc(setComputerIP:)
     public func setComputerIP(ip: String) -> OSResult {
         return messageManager.initSender(ip: ip)
+    }
+    
+    /**
+     Register a callback to be invoked when the mobile device
+     is connected to the computer running Ableton Live.
+     
+     - Parameter onSuccess: The callback that will run
+     - Since: 0.2
+     */
+    @objc(setOnConnectionSuccessCallback:)
+    public func setOnConnectionSuccessCallback(onSuccess: @escaping () -> Void) {
+        connectionSuccesDisp = liveSetDataManager.deviceParameter
+            .subscribe(onNext: { _ in
+                onSuccess()
+            })
+        _ = compositeDisposable.insert(connectionSuccesDisp!)
+    }
+    
+    /**
+     Remove the connection success callback.
+     
+     - Since: 0.2
+     */
+    @objc
+    public func removeOnConnectionSuccessCallback() {
+        connectionSuccesDisp?.dispose()
     }
     
 }

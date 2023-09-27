@@ -45,6 +45,13 @@ class ConfigurationViewModel {
             })
             .disposed(by: bag)
         
+        // On connection success
+        OscletonSDK.instance.config.onConnectionSuccess
+            .subscribe(onNext: { _ in
+                print("onConnectionSuccess")
+            })
+            .disposed(by: bag)
+        
     }
     
 }

@@ -38,6 +38,7 @@ class MessageManager {
     }
     
     private func setPeer() {
+        print("setPeer")
         
         guard let ipAddress = NetworkUtils.deviceIPAddress()
             else { return }

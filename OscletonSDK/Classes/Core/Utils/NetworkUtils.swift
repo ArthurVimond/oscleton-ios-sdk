@@ -20,6 +20,8 @@ public class NetworkUtils: NSObject {
      - Returns: the device IP address
      - Since: 0.1
      */
+    //  Not working on Simulator
+    // check https://gist.github.com/Eridana/a942df50ad1b554de0a6
     public static func deviceIPAddress() -> String? {
         var address: String?
         var ifaddr: UnsafeMutablePointer<ifaddrs>? = nil
@@ -41,6 +43,7 @@ public class NetworkUtils: NSObject {
             }
             freeifaddrs(ifaddr)
         }
+        print("deviceIPAddress - address: \(address)")
         return address
     }
 }
